@@ -1,6 +1,6 @@
 import axios from "axios";
 import { BOOKMARK_RECIPE, UNBOOKMARK_RECIPE } from "../components/actionTypes";
-import { API_URL } from "../constants";
+// import { API_URL } from "../constants";
 
 // const API_URL = "http://localhost:5000";
 
