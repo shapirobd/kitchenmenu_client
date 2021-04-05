@@ -79,7 +79,10 @@ export const logout = () => {
 export const editProfile = (username, data) => {
 	return async (dispatch) => {
 		try {
-			const editResp = await axios.patch(`${API_URL}/users/${username}`, data);
+			const editResp = await axios.patch(
+				`${process.env.API_URL || "http://localhost:5000"}/users/${username}`,
+				data
+			);
 			dispatch(edittedProfile(editResp.data));
 		} catch (e) {
 			console.error(e);

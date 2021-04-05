@@ -9,10 +9,15 @@ import { BOOKMARK_RECIPE, UNBOOKMARK_RECIPE } from "../components/actionTypes";
 export const bookmarkRecipe = (username, recipeId) => {
 	return async (dispatch) => {
 		try {
-			await axios.post(`${API_URL}/users/bookmarkRecipe`, {
-				username,
-				recipeId,
-			});
+			await axios.post(
+				`${
+					process.env.API_URL || "http://localhost:5000"
+				}/users/bookmarkRecipe`,
+				{
+					username,
+					recipeId,
+				}
+			);
 			dispatch(bookmarkedRecipe(recipeId));
 		} catch (e) {
 			console.error(e);
@@ -35,10 +40,15 @@ const bookmarkedRecipe = (recipeId) => {
 export const unbookmarkRecipe = (username, recipeId) => {
 	return async (dispatch) => {
 		try {
-			await axios.post(`${API_URL}/users/unbookmarkRecipe`, {
-				username,
-				recipeId,
-			});
+			await axios.post(
+				`${
+					process.env.API_URL || "http://localhost:5000"
+				}/users/unbookmarkRecipe`,
+				{
+					username,
+					recipeId,
+				}
+			);
 			dispatch(unbookmarkedRecipe(recipeId));
 		} catch (e) {
 			console.error(e);

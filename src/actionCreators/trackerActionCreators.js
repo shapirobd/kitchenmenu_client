@@ -15,12 +15,15 @@ export const addEatenMeal = (username, recipeId, date, nutrients) => {
 				carbs: Math.round(nutrients[3].amount),
 				protein: Math.round(nutrients[8].amount),
 			};
-			await axios.post(`${API_URL}/users/addEatenMeal`, {
-				username,
-				recipeId,
-				date,
-				nutrients: macros,
-			});
+			await axios.post(
+				`${process.env.API_URL || "http://localhost:5000"}/users/addEatenMeal`,
+				{
+					username,
+					recipeId,
+					date,
+					nutrients: macros,
+				}
+			);
 			dispatch(addedEatenMeal(recipeId, date, macros));
 		} catch (e) {
 			console.error(e);
@@ -52,11 +55,16 @@ const addedEatenMeal = (recipeId, date, nutrients) => {
 export const removeEatenMeal = (username, recipeId, date) => {
 	return async (dispatch) => {
 		try {
-			await axios.post(`${API_URL}/users/removeEatenMeal`, {
-				username,
-				recipeId,
-				date,
-			});
+			await axios.post(
+				`${
+					process.env.API_URL || "http://localhost:5000"
+				}/users/removeEatenMeal`,
+				{
+					username,
+					recipeId,
+					date,
+				}
+			);
 			dispatch(removedEatenMeal(recipeId, date));
 		} catch (e) {
 			console.error(e);
