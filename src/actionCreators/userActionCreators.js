@@ -1,8 +1,8 @@
 import axios from "axios";
 import { LOGIN, LOGOUT } from "../components/actionTypes";
-import { API_URL } from "../constants";
+// import { API_URL } from "../constants";
 
-// const API_URL = "http://localhost:5000";
+// let API_URL = "http://localhost:5000";
 
 // adds user to database as well as redux state
 // by dispatching action created by registered()
@@ -10,7 +10,10 @@ export const register = (data) => {
 	return async (dispatch) => {
 		try {
 			console.log("1. ACTION CREATOR");
-			const resp = await axios.post(`${API_URL}/auth/register`, data);
+			const resp = await axios.post(
+				`${process.env.API_URL || "http://localhost:5000"}/auth/register`,
+				data
+			);
 			// const userResp = await axios.get(`${API_URL}/users/${data.username}`);
 			const { user, token } = resp.data;
 			console.log(user);
@@ -39,7 +42,10 @@ const registered = (token, user) => {
 export const login = (data) => {
 	return async (dispatch) => {
 		try {
-			const resp = await axios.post(`${API_URL}/auth/login`, data);
+			const resp = await axios.post(
+				`${process.env.API_URL || "http://localhost:5000"}/auth/login`,
+				data
+			);
 			const { user, token } = resp.data;
 			dispatch(loggedIn(token, user));
 		} catch (e) {

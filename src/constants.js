@@ -1,13 +1,13 @@
-let apiUrl;
-console.log(process.env.NODE_ENV);
-if (process.env.NODE_ENV === "production") {
-	apiUrl = "http://www.kitchen-menu.com";
-} else {
-	apiUrl = "http://localhost:5000";
-}
-console.log(apiUrl);
+// let apiUrl;
+// console.log(process.env.NODE_ENV);
+// if (process.env.NODE_ENV === "production") {
+// 	apiUrl = "http://www.kitchen-menu.com";
+// } else {
+// 	apiUrl = "http://localhost:5000";
+// }
+// console.log(apiUrl);
 
-export const API_URL = apiUrl;
+// export const API_URL = apiUrl;
 
 export const ALL_DIETS = [
 	"glutenFree",
