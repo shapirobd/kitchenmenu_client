@@ -1,9 +1,11 @@
 let apiUrl;
+console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV === "production") {
 	apiUrl = "http://www.kitchen-menu.com";
 } else {
 	apiUrl = "http://localhost:5000";
 }
+console.log(apiUrl);
 
 export const API_URL = apiUrl;
 
