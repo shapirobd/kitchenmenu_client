@@ -1,0 +1,11 @@
+export const LOAD_FEED = "LOAD_FEED";
+export const CHANGE_PAGE = "CHANGE_PAGE";
+export const LOAD_RECIPE = "LOAD_RECIPE";
+export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
+export const BOOKMARK_RECIPE = "BOOKMARK_RECIPE";
+export const UNBOOKMARK_RECIPE = "UNBOOKMARK_RECIPE";
+export const FILTER_FEED = "FILTER_FEED";
+export const FILTER_BY_INGREDIENTS = "FILTER_BY_INGREDIENTS";
+export const ADD_EATEN_MEAL = "ADD_EATEN_MEAL";
+export const REMOVE_EATEN_MEAL = "REMOVE_EATEN_MEAL";

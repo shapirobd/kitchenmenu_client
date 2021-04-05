@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match screenshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root makeStyles-root-20 MuiGrid-container MuiGrid-spacing-xs-1"
+    cols="2"
+  >
+    <div
+      class="MuiGrid-root makeStyles-leftGridItem-22 MuiGrid-item MuiGrid-grid-sm-8"
+      cols="1"
+    >
+      <form
+        style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"
+      >
+        <div
+          class="makeStyles-main-24"
+        >
+          <h4
+            class="MuiTypography-root makeStyles-heading-26 MuiTypography-h4"
+          >
+            What's in your kitchen?
+          </h4>
+          <div
+            class="MuiFormGroup-root MuiFormGroup-row"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root"
+            >
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root makeStyles-textField-27 MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                  type="text"
+                  value=""
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-29 MuiOutlinedInput-notchedOutline"
+                  style="padding-left: 8px;"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legend-30"
+                    style="width: 0.01px;"
+                  >
+                    <span>
+                      ​
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-addItemBtn-28"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Add Item
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div
+      class="MuiGrid-root makeStyles-rightGridItem-35 MuiGrid-item MuiGrid-grid-sm-4"
+      cols="1"
+    >
+      <div
+        class="makeStyles-ingredients-37"
+      >
+        <h6
+          class="MuiTypography-root makeStyles-heading-34 MuiTypography-h6"
+        >
+          Selected Ingredients
+        </h6>
+        <hr
+          class="MuiDivider-root"
+          style="width: 100%;"
+        />
+        <div
+          style="height: 87%; width: 100%; background-color: rgba(255, 255, 255, 0.5);"
+        >
+          <div
+            style="display: flex; justify-content: center; flex-wrap: wrap; margin: 10px;"
+          />
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-submitBtn-33"
+          style="position: absolute; bottom: 0px; width: 100%; height: 10%; box-shadow: -2px 0px 8px rgba(0,0,0,0.5);"
+          tabindex="0"
+          type="submit"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Submit
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

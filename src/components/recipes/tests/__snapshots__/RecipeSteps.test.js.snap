@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match screenshot 1`] = `
+<DocumentFragment>
+  <div
+    class="makeStyles-root-3"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5"
+    >
+      Steps
+    </h5>
+    <ul
+      class="MuiList-root MuiList-padding"
+    >
+      <div>
+        <hr
+          class="MuiDivider-root"
+        />
+        <li
+          class="MuiListItem-root makeStyles-step-4 MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+        >
+          <div
+            class="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
+          >
+            <div
+              class="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+            >
+              0
+            </div>
+          </div>
+          <div
+            class="MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+            >
+              This is the first step
+            </span>
+          </div>
+        </li>
+      </div>
+      <div>
+        <hr
+          class="MuiDivider-root"
+        />
+        <li
+          class="MuiListItem-root makeStyles-step-4 MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+        >
+          <div
+            class="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
+          >
+            <div
+              class="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+            >
+              1
+            </div>
+          </div>
+          <div
+            class="MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+            >
+              This is the second step
+            </span>
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

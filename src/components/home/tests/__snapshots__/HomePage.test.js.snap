@@ -1,0 +1,1045 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match screenshot 1`] = `
+<DocumentFragment>
+  <div
+    class="makeStyles-root-34"
+  >
+    <div
+      style="width: 784px; height: 768px;"
+    >
+      <form
+        class="makeStyles-mobileRoot-38"
+      >
+        <div
+          style="float: left; width: 100%; height: 100%;"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            Diets
+          </p>
+          <ul
+            class="MuiList-root makeStyles-mobileList-41 MuiList-padding"
+          >
+            <li
+              class="MuiListItem-root makeStyles-listItem-43 MuiListItem-dense MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-45 MuiCheckbox-root MuiCheckbox-colorSecondary makeStyles-checkbox-44 MuiIconButton-colorSecondary MuiIconButton-edgeStart"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <input
+                      aria-labelledby="checkbox-list-label-0"
+                      class="PrivateSwitchBase-input-48"
+                      data-indeterminate="false"
+                      tabindex="-1"
+                      type="checkbox"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiListItemText-root MuiListItemText-dense"
+                id="checkbox-list-label-0"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  GLUTENFREE
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root makeStyles-listItem-43 MuiListItem-dense MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-45 MuiCheckbox-root MuiCheckbox-colorSecondary makeStyles-checkbox-44 MuiIconButton-colorSecondary MuiIconButton-edgeStart"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <input
+                      aria-labelledby="checkbox-list-label-1"
+                      class="PrivateSwitchBase-input-48"
+                      data-indeterminate="false"
+                      tabindex="-1"
+                      type="checkbox"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiListItemText-root MuiListItemText-dense"
+                id="checkbox-list-label-1"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  KETOGENIC
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root makeStyles-listItem-43 MuiListItem-dense MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-45 MuiCheckbox-root MuiCheckbox-colorSecondary makeStyles-checkbox-44 MuiIconButton-colorSecondary MuiIconButton-edgeStart"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <input
+                      aria-labelledby="checkbox-list-label-2"
+                      class="PrivateSwitchBase-input-48"
+                      data-indeterminate="false"
+                      tabindex="-1"
+                      type="checkbox"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiListItemText-root MuiListItemText-dense"
+                id="checkbox-list-label-2"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  VEGETARIAN
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root makeStyles-listItem-43 MuiListItem-dense MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-45 MuiCheckbox-root MuiCheckbox-colorSecondary makeStyles-checkbox-44 MuiIconButton-colorSecondary MuiIconButton-edgeStart"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <input
+                      aria-labelledby="checkbox-list-label-3"
+                      class="PrivateSwitchBase-input-48"
+                      data-indeterminate="false"
+                      tabindex="-1"
+                      type="checkbox"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiListItemText-root MuiListItemText-dense"
+                id="checkbox-list-label-3"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  LACTOVEGETARIAN
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root makeStyles-listItem-43 MuiListItem-dense MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-45 MuiCheckbox-root MuiCheckbox-colorSecondary makeStyles-checkbox-44 MuiIconButton-colorSecondary MuiIconButton-edgeStart"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <input
+                      aria-labelledby="checkbox-list-label-4"
+                      class="PrivateSwitchBase-input-48"
+                      data-indeterminate="false"
+                      tabindex="-1"
+                      type="checkbox"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiListItemText-root MuiListItemText-dense"
+                id="checkbox-list-label-4"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  OVOVEGETARIAN
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root makeStyles-listItem-43 MuiListItem-dense MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-45 MuiCheckbox-root MuiCheckbox-colorSecondary makeStyles-checkbox-44 MuiIconButton-colorSecondary MuiIconButton-edgeStart"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <input
+                      aria-labelledby="checkbox-list-label-5"
+                      class="PrivateSwitchBase-input-48"
+                      data-indeterminate="false"
+                      tabindex="-1"
+                      type="checkbox"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiListItemText-root MuiListItemText-dense"
+                id="checkbox-list-label-5"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  LACTOOVOVEGETARIAN
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root makeStyles-listItem-43 MuiListItem-dense MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-45 MuiCheckbox-root MuiCheckbox-colorSecondary makeStyles-checkbox-44 MuiIconButton-colorSecondary MuiIconButton-edgeStart"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <input
+                      aria-labelledby="checkbox-list-label-6"
+                      class="PrivateSwitchBase-input-48"
+                      data-indeterminate="false"
+                      tabindex="-1"
+                      type="checkbox"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiListItemText-root MuiListItemText-dense"
+                id="checkbox-list-label-6"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  VEGAN
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root makeStyles-listItem-43 MuiListItem-dense MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-45 MuiCheckbox-root MuiCheckbox-colorSecondary makeStyles-checkbox-44 MuiIconButton-colorSecondary MuiIconButton-edgeStart"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <input
+                      aria-labelledby="checkbox-list-label-7"
+                      class="PrivateSwitchBase-input-48"
+                      data-indeterminate="false"
+                      tabindex="-1"
+                      type="checkbox"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiListItemText-root MuiListItemText-dense"
+                id="checkbox-list-label-7"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  PESCETARIAN
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root makeStyles-listItem-43 MuiListItem-dense MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-45 MuiCheckbox-root MuiCheckbox-colorSecondary makeStyles-checkbox-44 MuiIconButton-colorSecondary MuiIconButton-edgeStart"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <input
+                      aria-labelledby="checkbox-list-label-8"
+                      class="PrivateSwitchBase-input-48"
+                      data-indeterminate="false"
+                      tabindex="-1"
+                      type="checkbox"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiListItemText-root MuiListItemText-dense"
+                id="checkbox-list-label-8"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  PALEO
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root makeStyles-listItem-43 MuiListItem-dense MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-45 MuiCheckbox-root MuiCheckbox-colorSecondary makeStyles-checkbox-44 MuiIconButton-colorSecondary MuiIconButton-edgeStart"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <input
+                      aria-labelledby="checkbox-list-label-9"
+                      class="PrivateSwitchBase-input-48"
+                      data-indeterminate="false"
+                      tabindex="-1"
+                      type="checkbox"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiListItemText-root MuiListItemText-dense"
+                id="checkbox-list-label-9"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  PRIMAL
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root makeStyles-listItem-43 MuiListItem-dense MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-45 MuiCheckbox-root MuiCheckbox-colorSecondary makeStyles-checkbox-44 MuiIconButton-colorSecondary MuiIconButton-edgeStart"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <input
+                      aria-labelledby="checkbox-list-label-10"
+                      class="PrivateSwitchBase-input-48"
+                      data-indeterminate="false"
+                      tabindex="-1"
+                      type="checkbox"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiListItemText-root MuiListItemText-dense"
+                id="checkbox-list-label-10"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                >
+                  WHOLE30
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          style="width: 100%; justify-content: right;"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            Macros
+          </p>
+          <div
+            style="margin: 0px 0px 10px 0px;"
+          >
+            <div
+              class="MuiGrid-root makeStyles-gridContainer-49 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-end"
+              cols="2"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                cols="1"
+                style="padding-right: 0px;"
+              >
+                <div
+                  class="MuiFormControl-root MuiFormControl-fullWidth"
+                >
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root makeStyles-selectField-51 MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+                  >
+                    <div
+                      aria-haspopup="listbox"
+                      aria-labelledby="mui-component-select-operator-Fat"
+                      class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                      id="mui-component-select-operator-Fat"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </div>
+                    <input
+                      aria-hidden="true"
+                      class="MuiSelect-nativeInput"
+                      name="operator-Fat"
+                      tabindex="-1"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7 10l5 5 5-5z"
+                      />
+                    </svg>
+                    <fieldset
+                      aria-hidden="true"
+                      class="PrivateNotchedOutline-root-53 MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="PrivateNotchedOutline-legendLabelled-55"
+                      >
+                        <span>
+                          Comparison
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                cols="1"
+                style="padding-left: 0px;"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root"
+                  style="width: 100%;"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense MuiInputLabel-outlined"
+                    data-shrink="false"
+                  >
+                    Fat
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root makeStyles-textField-52 MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                      name="amount-Fat"
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-marginDense"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
+                      >
+                        g
+                      </p>
+                    </div>
+                    <fieldset
+                      aria-hidden="true"
+                      class="PrivateNotchedOutline-root-53 MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="PrivateNotchedOutline-legendLabelled-55"
+                      >
+                        <span>
+                          Fat
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root makeStyles-gridContainer-49 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-end"
+              cols="2"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                cols="1"
+                style="padding-right: 0px;"
+              >
+                <div
+                  class="MuiFormControl-root MuiFormControl-fullWidth"
+                >
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root makeStyles-selectField-51 MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+                  >
+                    <div
+                      aria-haspopup="listbox"
+                      aria-labelledby="mui-component-select-operator-Protein"
+                      class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                      id="mui-component-select-operator-Protein"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </div>
+                    <input
+                      aria-hidden="true"
+                      class="MuiSelect-nativeInput"
+                      name="operator-Protein"
+                      tabindex="-1"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7 10l5 5 5-5z"
+                      />
+                    </svg>
+                    <fieldset
+                      aria-hidden="true"
+                      class="PrivateNotchedOutline-root-53 MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="PrivateNotchedOutline-legendLabelled-55"
+                      >
+                        <span>
+                          Comparison
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                cols="1"
+                style="padding-left: 0px;"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root"
+                  style="width: 100%;"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense MuiInputLabel-outlined"
+                    data-shrink="false"
+                  >
+                    Protein
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root makeStyles-textField-52 MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                      name="amount-Protein"
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-marginDense"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
+                      >
+                        g
+                      </p>
+                    </div>
+                    <fieldset
+                      aria-hidden="true"
+                      class="PrivateNotchedOutline-root-53 MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="PrivateNotchedOutline-legendLabelled-55"
+                      >
+                        <span>
+                          Protein
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root makeStyles-gridContainer-49 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-end"
+              cols="2"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                cols="1"
+                style="padding-right: 0px;"
+              >
+                <div
+                  class="MuiFormControl-root MuiFormControl-fullWidth"
+                >
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root makeStyles-selectField-51 MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+                  >
+                    <div
+                      aria-haspopup="listbox"
+                      aria-labelledby="mui-component-select-operator-Carbohydrates"
+                      class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                      id="mui-component-select-operator-Carbohydrates"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </div>
+                    <input
+                      aria-hidden="true"
+                      class="MuiSelect-nativeInput"
+                      name="operator-Carbohydrates"
+                      tabindex="-1"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7 10l5 5 5-5z"
+                      />
+                    </svg>
+                    <fieldset
+                      aria-hidden="true"
+                      class="PrivateNotchedOutline-root-53 MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="PrivateNotchedOutline-legendLabelled-55"
+                      >
+                        <span>
+                          Comparison
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                cols="1"
+                style="padding-left: 0px;"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root"
+                  style="width: 100%;"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense MuiInputLabel-outlined"
+                    data-shrink="false"
+                  >
+                    Carbohydrates
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root makeStyles-textField-52 MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                      name="amount-Carbohydrates"
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-marginDense"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
+                      >
+                        g
+                      </p>
+                    </div>
+                    <fieldset
+                      aria-hidden="true"
+                      class="PrivateNotchedOutline-root-53 MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="PrivateNotchedOutline-legendLabelled-55"
+                      >
+                        <span>
+                          Carbohydrates
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            Name
+          </p>
+          <div>
+            <div
+              class="MuiFormControl-root MuiTextField-root"
+              style="width: 100%;"
+            >
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                  name="recipeName"
+                  type="text"
+                  value=""
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-53 MuiOutlinedInput-notchedOutline"
+                  style="padding-left: 8px;"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legend-54"
+                    style="width: 0.01px;"
+                  >
+                    <span>
+                      ​
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="width: 100%; margin: 15px 0px 0px 0px;"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-39"
+            tabindex="0"
+            type="submit"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Apply
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-resetButton-40"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Reset
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </form>
+      <div
+        style="width: 100%; background-color: white; display: flex; flex-direction: column; justify-content: space-around; align-items: center; border-radius: 5px; margin: 0px 0px 10px 0px;"
+      >
+        <nav
+          aria-label="pagination navigation"
+          class="MuiPagination-root makeStyles-pagination-36"
+        >
+          <ul
+            class="MuiPagination-ul"
+          >
+            <li>
+              <button
+                aria-label="Go to previous page"
+                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-outlined Mui-disabled Mui-disabled"
+                disabled=""
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiPaginationItem-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button
+                aria-label="Go to next page"
+                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-outlined Mui-disabled Mui-disabled"
+                disabled=""
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiPaginationItem-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                  />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <div
+          class="makeStyles-root-57"
+        >
+          <ul
+            class="MuiGridList-root makeStyles-gridList-58"
+            style="margin: -2px;"
+          />
+        </div>
+        <nav
+          aria-label="pagination navigation"
+          class="MuiPagination-root makeStyles-pagination-36"
+        >
+          <ul
+            class="MuiPagination-ul"
+          >
+            <li>
+              <button
+                aria-label="Go to previous page"
+                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-outlined Mui-disabled Mui-disabled"
+                disabled=""
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiPaginationItem-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button
+                aria-label="Go to next page"
+                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-outlined Mui-disabled Mui-disabled"
+                disabled=""
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiPaginationItem-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                  />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,60 @@
+import { makeStyles } from "@material-ui/core/styles";
+
+export const useStyles = makeStyles(() => ({
+	submitBtn: {
+		backgroundColor: "#4caf50",
+		color: "#fff",
+		"&:hover": {
+			backgroundColor: "#81c784",
+		},
+		borderTopLeftRadius: 0,
+		borderTopRightRadius: 0,
+	},
+	heading: {
+		display: "flex",
+		flexDirection: "row",
+		justifyContent: "center",
+		alignItems: "center",
+		padding: "10px 0",
+		width: "100%",
+		backgroundColor: "#fff",
+		borderTopLeftRadius: "5px",
+		borderTopRightRadius: "5px",
+		textAlign: "center",
+		height: "5%",
+	},
+	rightGridItem: {
+		height: "100%",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center",
+	},
+	bottomGridItem: {
+		height: "100vw",
+		width: "100vw",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center",
+	},
+	ingredients: {
+		boxShadow: "-2px -2px 10px black",
+		borderRadius: "5px",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		height: "50%",
+		width: "80%",
+		position: "relative",
+	},
+	mobileIngredients: {
+		borderRadius: "5px",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		height: "100%",
+		width: "100%",
+		position: "relative",
+	},
+}));
