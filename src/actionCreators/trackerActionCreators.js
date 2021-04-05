@@ -1,8 +1,5 @@
 import axios from "axios";
 import { ADD_EATEN_MEAL, REMOVE_EATEN_MEAL } from "../components/actionTypes";
-// import { API_URL } from "../constants";
-
-// const API_URL = "http://localhost:5000";
 
 // adds eaten meal to database as well as redux state for a given date
 // by dispatching action created by addedEatenMeal()

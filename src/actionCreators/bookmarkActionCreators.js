@@ -1,8 +1,5 @@
 import axios from "axios";
 import { BOOKMARK_RECIPE, UNBOOKMARK_RECIPE } from "../components/actionTypes";
-// import { API_URL } from "../constants";
-
-// const API_URL = "http://localhost:5000";
 
 // adds bookmarked recipe to database as well as redux state
 // by dispatching action created by bookmarkedRecipe()

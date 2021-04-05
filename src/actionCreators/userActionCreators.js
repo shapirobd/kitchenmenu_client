@@ -1,8 +1,5 @@
 import axios from "axios";
 import { LOGIN, LOGOUT } from "../components/actionTypes";
-// import { API_URL } from "../constants";
-
-// let API_URL = "http://localhost:5000";
 
 // adds user to database as well as redux state
 // by dispatching action created by registered()

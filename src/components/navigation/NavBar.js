@@ -26,6 +26,8 @@ const NavBar = () => {
 
 	const user = useSelector((state) => state.user);
 
+	const [searchData, setSearchData] = useState("");
+
 	const handleLogout = (evt) => {
 		evt.preventDefault();
 		dispatch(logout());
@@ -38,7 +40,7 @@ const NavBar = () => {
 
 	const handleSearch = (evt) => {
 		evt.preventDefault();
-		dispatch(loadFeed(1, searchData));
+		dispatch(loadFeed(1, { diets: [], macros: {}, recipeName: searchData }));
 		if (location.pathname !== "/") {
 			history.push("/");
 		}
@@ -58,8 +60,6 @@ const NavBar = () => {
 		}
 		setState({ ...state, [anchor]: open });
 	};
-
-	const [searchData, setSearchData] = useState("");
 
 	return (
 		<div className={classes.root}>
