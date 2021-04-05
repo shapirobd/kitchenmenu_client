@@ -10,6 +10,7 @@ export const register = (data) => {
 	return async (dispatch) => {
 		try {
 			console.log("1. ACTION CREATOR");
+			console.log(process.env.API_URL);
 			const resp = await axios.post(
 				`${process.env.API_URL || "http://localhost:5000"}/auth/register`,
 				data
