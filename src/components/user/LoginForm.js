@@ -31,10 +31,8 @@ const LoginForm = () => {
 		dispatch(login(formData));
 		setTimeout(() => {
 			if (!user) {
-				console.log("!user");
 				setInvalidLogin(true);
 			} else {
-				console.log("user");
 				setInvalidLogin(false);
 			}
 		}, 1000);
@@ -42,8 +40,6 @@ const LoginForm = () => {
 
 	useEffect(() => {
 		if (user) {
-			console.log(user);
-			console.log("VALID");
 			setFormData(INITIAL_FORM_DATA);
 			history.push("/");
 		}

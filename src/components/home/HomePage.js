@@ -12,10 +12,6 @@ const HomePage = () => {
 	const classes = useStyles();
 	const dispatch = useDispatch();
 
-	const user = useSelector((state) => state.user, shallowEqual);
-	const token = useSelector((state) => state.token, shallowEqual);
-	console.log(user);
-	console.log(token);
 	const feed = useSelector((state) => state.feed, shallowEqual);
 	const page = useSelector((state) => state.page, shallowEqual);
 	const totalResults = useSelector((state) => state.totalResults, shallowEqual);
@@ -27,7 +23,7 @@ const HomePage = () => {
 
 	useEffect(() => {
 		filtered ? dispatch(loadFeed(page, filterData)) : dispatch(loadFeed(page));
-	}, [page, dispatch, filterData, filtered]);
+	}, [page, dispatch, filtered]);
 
 	const handleChange = (event, value) => {
 		filtered

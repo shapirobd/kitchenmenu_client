@@ -9,10 +9,7 @@ import { Provider } from "react-redux";
 import { store, persistor } from "../configureStore";
 import jwt from "jsonwebtoken";
 import axios from "axios";
-// import { SECRET_KEY } from "../../../back-end/config";
 import "@testing-library/jest-dom/extend-expect";
-
-console.log(process.env.SECRET_KEY);
 
 const user = {
 	first_name: "Brian",

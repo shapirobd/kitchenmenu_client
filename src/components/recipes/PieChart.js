@@ -5,7 +5,6 @@ import { Doughnut } from "react-chartjs-2";
 import { Typography } from "@material-ui/core";
 
 const PieChart = ({ title, caloricBreakdown }) => {
-	console.log(caloricBreakdown);
 	const { percentFat, percentCarbs, percentProtein } = caloricBreakdown;
 	const classes = useStyles();
 

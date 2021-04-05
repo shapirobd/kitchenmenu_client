@@ -78,7 +78,6 @@ const WelcomePage = () => {
 			spacing={1}
 			className={width > 599 ? classes.root : classes.mobileRoot}
 		>
-			{console.log(ingredients)}
 			<IngredientInput
 				ingredients={ingredients}
 				handleChange={handleChange}

@@ -22,7 +22,6 @@ import convertDate from "../../helpers/convertDate";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
 
 const Recipe = ({ user }) => {
-	console.log(user);
 	const classes = useStyles();
 	const { width } = useWindowDimensions();
 	const { recipeId } = useParams();
@@ -40,7 +39,6 @@ const Recipe = ({ user }) => {
 	);
 
 	const [currentRecipe, setCurrentRecipe] = useState(null);
-	console.log(currentRecipe);
 	const toggleEaten = () => {
 		if (!user.username) {
 			history.push("/signup");

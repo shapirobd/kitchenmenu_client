@@ -63,7 +63,6 @@ const NavBar = () => {
 
 	return (
 		<div className={classes.root}>
-			{console.log(width)}
 			<AppBar position="fixed" className={classes.appBar}>
 				<Toolbar classes={{ root: classes.root }}>
 					{width <= 599 && user ? (

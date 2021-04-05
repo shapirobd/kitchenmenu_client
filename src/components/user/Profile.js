@@ -74,7 +74,6 @@ const Profile = () => {
 												justifyContent: "space-between",
 											}}
 										>
-											{console.log(key)}
 											<Typography>
 												{key.toUpperCase().replace("_", " ")}
 											</Typography>

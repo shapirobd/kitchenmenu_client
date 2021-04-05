@@ -42,7 +42,6 @@ const EditProfileForm = ({ user, setEditting }) => {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			{console.log(formData)}
 			{Object.keys(user).map((key) =>
 				key !== "username" && key !== "bookmarks" && key !== "eatenMeals" ? (
 					<TextField

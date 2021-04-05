@@ -6,8 +6,6 @@ import { LOGIN, LOGOUT } from "../components/actionTypes";
 export const register = (data) => {
 	return async (dispatch) => {
 		try {
-			console.log("1. ACTION CREATOR");
-			console.log(process.env.REACT_APP_API_URL);
 			const resp = await axios.post(
 				`${
 					process.env.REACT_APP_API_URL || "http://localhost:5000"
@@ -16,7 +14,6 @@ export const register = (data) => {
 			);
 			// const userResp = await axios.get(`${API_URL}/users/${data.username}`);
 			const { user, token } = resp.data;
-			console.log(user);
 			dispatch(registered(token, user));
 		} catch (e) {
 			console.error(e);

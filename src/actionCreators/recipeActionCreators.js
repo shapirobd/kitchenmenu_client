@@ -47,7 +47,6 @@ const loadedFeed = (data, page) => {
 // retrieves data on a single recipe from spoonacular API and updates
 // currentRecipe in redux state by dispatching recipe info & instructions info
 export const loadRecipe = (recipeId) => {
-	console.log("2: ", recipeId);
 	return async (dispatch) => {
 		try {
 			const recipe = await axios.get(
@@ -160,7 +159,6 @@ export const getRecipesByIngredients = (ingredients) => {
 // 					},
 // 				}
 // 			);
-// 			console.log(recipes.data);
 // 			dispatch(filteredFeed(recipes.data, page));
 // 		} catch (e) {
 // 			console.error(e);

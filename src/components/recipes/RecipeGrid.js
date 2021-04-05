@@ -24,7 +24,6 @@ const RecipeGrid = ({ feed, areBookmarks, removeBookmark, ingredients }) => {
 
 	return (
 		<div className={classes.root}>
-			{console.log(width / 400)}
 			<GridList
 				cellHeight={200}
 				cols={Math.round(width / 400)}

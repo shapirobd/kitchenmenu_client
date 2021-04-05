@@ -9,7 +9,6 @@ const theme = createMuiTheme({
 		fontFamily: ["Ubuntu"].join(","),
 	},
 });
-//   componentDidMount() {    this.connecToServer();  }
 
 function App() {
 	const connectToServer = () => {
@@ -22,7 +21,6 @@ function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			{console.log("APP!")}
 			<div className="App">
 				<NavBar />
 				<Routes />

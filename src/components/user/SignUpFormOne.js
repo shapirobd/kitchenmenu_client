@@ -7,7 +7,6 @@ const SignUpFormOne = ({ handleSubmit, handleChange, missingData }) => {
 
 	return (
 		<form className={classes.form} onSubmit={handleSubmit}>
-			{console.log(missingData)}
 			<Grid container spacing={2}>
 				<Grid item xs={12} md={6}>
 					<TextField
@@ -102,9 +101,6 @@ const SignUpFormOne = ({ handleSubmit, handleChange, missingData }) => {
 					) : null}
 				</Grid>
 			</Grid>
-			{/* <Button type="submit" className={classes.button}>
-				Submit
-			</Button> */}
 		</form>
 	);
 };
