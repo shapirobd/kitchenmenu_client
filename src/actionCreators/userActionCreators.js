@@ -10,9 +10,11 @@ export const register = (data) => {
 	return async (dispatch) => {
 		try {
 			console.log("1. ACTION CREATOR");
-			console.log(process.env.API_URL);
+			console.log(process.env.REACT_APP_API_URL);
 			const resp = await axios.post(
-				`${process.env.API_URL || "http://localhost:5000"}/auth/register`,
+				`${
+					process.env.REACT_APP_API_URL || "http://localhost:5000"
+				}/auth/register`,
 				data
 			);
 			// const userResp = await axios.get(`${API_URL}/users/${data.username}`);
@@ -44,7 +46,9 @@ export const login = (data) => {
 	return async (dispatch) => {
 		try {
 			const resp = await axios.post(
-				`${process.env.API_URL || "http://localhost:5000"}/auth/login`,
+				`${
+					process.env.REACT_APP_API_URL || "http://localhost:5000"
+				}/auth/login`,
 				data
 			);
 			const { user, token } = resp.data;
