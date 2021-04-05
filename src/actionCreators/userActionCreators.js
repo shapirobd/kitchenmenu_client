@@ -10,7 +10,7 @@ export const register = (data) => {
 	return async (dispatch) => {
 		try {
 			console.log("1. ACTION CREATOR");
-			const resp = await axios.post(`/auth/register`, data);
+			const resp = await axios.post(`${API_URL}/auth/register`, data);
 			// const userResp = await axios.get(`${API_URL}/users/${data.username}`);
 			const { user, token } = resp.data;
 			console.log(user);
@@ -39,7 +39,7 @@ const registered = (token, user) => {
 export const login = (data) => {
 	return async (dispatch) => {
 		try {
-			const resp = await axios.post(`/auth/login`, data);
+			const resp = await axios.post(`${API_URL}/auth/login`, data);
 			const { user, token } = resp.data;
 			dispatch(loggedIn(token, user));
 		} catch (e) {
