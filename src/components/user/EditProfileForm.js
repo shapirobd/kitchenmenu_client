@@ -30,7 +30,7 @@ const EditProfileForm = ({ user, setEditting }) => {
 		const { name, value } = evt.target;
 		setFormData((formData) => ({
 			...formData,
-			[name]: value,
+			[name]: +value || value,
 		}));
 	};
 
