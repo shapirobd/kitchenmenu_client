@@ -16,7 +16,9 @@ export const addEatenMeal = (username, recipeId, date, nutrients) => {
 				protein: Math.round(nutrients[8].amount),
 			};
 			await axios.post(
-				`${process.env.API_URL || "http://localhost:5000"}/users/addEatenMeal`,
+				`${
+					process.env.REACT_APP_API_URL || "http://localhost:5000"
+				}/users/addEatenMeal`,
 				{
 					username,
 					recipeId,
@@ -57,7 +59,7 @@ export const removeEatenMeal = (username, recipeId, date) => {
 		try {
 			await axios.post(
 				`${
-					process.env.API_URL || "http://localhost:5000"
+					process.env.REACT_APP_API_URL || "http://localhost:5000"
 				}/users/removeEatenMeal`,
 				{
 					username,

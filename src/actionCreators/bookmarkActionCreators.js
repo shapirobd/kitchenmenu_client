@@ -11,7 +11,7 @@ export const bookmarkRecipe = (username, recipeId) => {
 		try {
 			await axios.post(
 				`${
-					process.env.API_URL || "http://localhost:5000"
+					process.env.REACT_APP_API_URL || "http://localhost:5000"
 				}/users/bookmarkRecipe`,
 				{
 					username,
@@ -42,7 +42,7 @@ export const unbookmarkRecipe = (username, recipeId) => {
 		try {
 			await axios.post(
 				`${
-					process.env.API_URL || "http://localhost:5000"
+					process.env.REACT_APP_API_URL || "http://localhost:5000"
 				}/users/unbookmarkRecipe`,
 				{
 					username,
