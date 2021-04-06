@@ -19,15 +19,17 @@ const WelcomePage = () => {
 	const [formSubmitted, setFormSubmitted] = useState(false);
 	const [results, setResults] = useState(undefined);
 
-	$(".expandBtn").on("click", function () {
-		console.log($(".makeStyles-root-22").height());
+	const scrollToResults = () => {
 		$(".makeStyles-root-13").animate(
-			// { scrollTop: $(".results").offset().top - 100 },
 			{ scrollTop: $(".makeStyles-root-22").height() },
 			1000
 		);
+		$(".makeStyles-mobileRoot-23").animate(
+			{ scrollTop: $(".makeStyles-mobileRoot-23").height() },
+			1000
+		);
 		$(this).remove();
-	});
+	};
 
 	const handleChange = (evt) => {
 		setFormData(evt.target.value);
@@ -77,6 +79,7 @@ const WelcomePage = () => {
 
 	useEffect(() => {
 		if (results) {
+			scrollToResults();
 			setFormSubmitted(false);
 		}
 	}, [results]);
@@ -107,14 +110,22 @@ const WelcomePage = () => {
 			/>
 			{formSubmitted ? (
 				<div
-					className={{
+					style={{
 						position: "absolute",
-						top: "50%",
-						left: "50%",
-						transform: "translate(-50%, -50%)",
+						width: "100%",
+						height: "100%",
+						backgroundColor: "rgba(0,0,0,0.3)",
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "center",
+						justifyContent: "center",
 					}}
 				>
-					<CircularProgress />
+					{console.log("circular")}
+					<CircularProgress
+						size={50}
+						classes={{ root: classes.circularProgress }}
+					/>
 				</div>
 			) : null}
 			{results ? (
@@ -122,7 +133,7 @@ const WelcomePage = () => {
 					<div
 						style={{
 							width: "100%",
-							backgroundColor: "white",
+							backgroundColor: "#fff",
 							display: "flex",
 							flexDirection: "column",
 							justifyContent: "space-around",
@@ -133,21 +144,6 @@ const WelcomePage = () => {
 						}}
 						className="results"
 					>
-						<div
-							style={{
-								// position: "absolute",
-								margin: "-100px auto 50px auto",
-								padding: "10px",
-								top: "90%",
-								left: "50%",
-								transform: "translateX(-50%)",
-								backgroundColor: "#fff",
-								borderRadius: "50%",
-							}}
-							className="expandBtn"
-						>
-							<ExpandMoreIcon fontSize="large" />
-						</div>
 						<Grid
 							item
 							cols={2}

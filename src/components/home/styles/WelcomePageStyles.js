@@ -18,4 +18,7 @@ export const useStyles = makeStyles(() => ({
 		overflowY: "auto",
 		// overflow: "hidden",
 	},
+	circularProgress: {
+		color: "#a5d6a7",
+	},
 }));
