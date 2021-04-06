@@ -65,9 +65,9 @@ const BookmarksPage = () => {
 						<Typography
 							variant="h4"
 							style={{
-								margin: "20px",
+								// margin: "20px",
 								position: "absolute",
-								top: "5%",
+								top: "4%",
 								left: "5%",
 							}}
 						>
@@ -79,10 +79,18 @@ const BookmarksPage = () => {
 								margin: "0",
 								width: "100%",
 								position: "absolute",
-								top: "15%",
+								top: "11%",
 							}}
 						/>
-						<div style={{ position: "absolute", top: "20%", width: "95%" }}>
+						<div
+							style={{
+								position: "absolute",
+								top: "14%",
+								width: "100%",
+								display: "flex",
+								justifyContent: "center",
+							}}
+						>
 							<RecipeGrid
 								feed={fullBookmarks}
 								areBookmarks={true}

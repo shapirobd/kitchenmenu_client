@@ -12,7 +12,7 @@ export const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		flexDirection: "row",
 		width: "100%",
-		justifyContent: "center",
+		// justifyContent: "center",
 		alignItems: "center",
 	},
 	icon: {
