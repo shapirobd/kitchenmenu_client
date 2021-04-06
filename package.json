@@ -14,6 +14,7 @@
 		"canvasjs": "^1.8.3",
 		"canvasjs-react-charts": "^1.0.5",
 		"chart.js": "^2.9.4",
+		"jquery": "^3.6.0",
 		"moment": "^2.29.1",
 		"react": "^17.0.1",
 		"react-calendar": "^3.3.1",

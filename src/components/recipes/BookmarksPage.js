@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import RecipeGrid from "./RecipeGrid";
-import { Typography } from "@material-ui/core";
+import { Typography, Divider } from "@material-ui/core";
 import { useStyles } from "./styles/BookmarksPageStyles";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
 import { unbookmarkRecipe } from "../../actionCreators/bookmarkActionCreators";
@@ -42,13 +42,15 @@ const BookmarksPage = () => {
 				<div
 					style={
 						width > 599
-							? { width: `${width - 240}px`, height: `${height}px` }
+							? // ? { width: `${width - 240}px`, height: `${height}px` }
+							  { width: `${width - 240}px`, height: `100%` }
 							: { width: "100%", height: "100%" }
 					}
 				>
 					<div
 						style={{
 							width: "100%",
+							height: "100%",
 							backgroundColor: "white",
 							display: "flex",
 							flexDirection: "column",
@@ -57,16 +59,36 @@ const BookmarksPage = () => {
 							borderRadius: "5px",
 							margin: "0 0 10px 0",
 							paddingBottom: "30px",
+							position: "relative",
 						}}
 					>
-						<Typography variant="h4" style={{ margin: "20px" }}>
+						<Typography
+							variant="h4"
+							style={{
+								margin: "20px",
+								position: "absolute",
+								top: "5%",
+								left: "5%",
+							}}
+						>
 							Bookmarks
 						</Typography>
-						<RecipeGrid
-							feed={fullBookmarks}
-							areBookmarks={true}
-							removeBookmark={removeBookmark}
+						<Divider
+							variant="inset"
+							style={{
+								margin: "0",
+								width: "100%",
+								position: "absolute",
+								top: "15%",
+							}}
 						/>
+						<div style={{ position: "absolute", top: "20%", width: "95%" }}>
+							<RecipeGrid
+								feed={fullBookmarks}
+								areBookmarks={true}
+								removeBookmark={removeBookmark}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>

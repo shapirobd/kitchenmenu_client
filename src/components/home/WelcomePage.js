@@ -6,6 +6,9 @@ import RecipeGrid from "../recipes/RecipeGrid";
 import IngredientInput from "./IngredientInput";
 import IngredientList from "./IngredientList";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import $ from "jquery";
 
 const WelcomePage = () => {
 	const classes = useStyles();
@@ -15,6 +18,16 @@ const WelcomePage = () => {
 	const [ingredients, setIngredients] = useState([]);
 	const [formSubmitted, setFormSubmitted] = useState(false);
 	const [results, setResults] = useState(undefined);
+
+	$(".expandBtn").on("click", function () {
+		console.log($(".makeStyles-root-22").height());
+		$(".makeStyles-root-13").animate(
+			// { scrollTop: $(".results").offset().top - 100 },
+			{ scrollTop: $(".makeStyles-root-22").height() },
+			1000
+		);
+		$(this).remove();
+	});
 
 	const handleChange = (evt) => {
 		setFormData(evt.target.value);
@@ -38,6 +51,7 @@ const WelcomePage = () => {
 
 	useEffect(() => {
 		if (formSubmitted) {
+			setResults(undefined);
 			const getResults = async () => {
 				try {
 					const ingredientsParams = ingredients.join(",");
@@ -91,6 +105,18 @@ const WelcomePage = () => {
 				deleteIngredient={deleteIngredient}
 				mobile={width <= 599}
 			/>
+			{formSubmitted ? (
+				<div
+					className={{
+						position: "absolute",
+						top: "50%",
+						left: "50%",
+						transform: "translate(-50%, -50%)",
+					}}
+				>
+					<CircularProgress />
+				</div>
+			) : null}
 			{results ? (
 				results.length ? (
 					<div
@@ -105,7 +131,23 @@ const WelcomePage = () => {
 							margin: "0 0 10px 0",
 							paddingBottom: "30px",
 						}}
+						className="results"
 					>
+						<div
+							style={{
+								// position: "absolute",
+								margin: "-100px auto 50px auto",
+								padding: "10px",
+								top: "90%",
+								left: "50%",
+								transform: "translateX(-50%)",
+								backgroundColor: "#fff",
+								borderRadius: "50%",
+							}}
+							className="expandBtn"
+						>
+							<ExpandMoreIcon fontSize="large" />
+						</div>
 						<Grid
 							item
 							cols={2}
