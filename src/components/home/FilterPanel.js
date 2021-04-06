@@ -8,12 +8,10 @@ import { loadFeed } from "../../actionCreators/recipeActionCreators";
 import { ALL_DIETS, ALL_MACROS, INITIAL_FILTER_DATA } from "../../constants";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
 
-const FilterPanel = ({ setFiltered, filterData, setFilterData, mobile }) => {
+const FilterPanel = ({ setFiltered, filterData, setFilterData }) => {
 	const classes = useStyles();
 	const dispatch = useDispatch();
-
 	const { width } = useWindowDimensions();
-
 	const [checked, setChecked] = useState([]);
 
 	const resetFeed = (evt) => {
@@ -23,7 +21,7 @@ const FilterPanel = ({ setFiltered, filterData, setFilterData, mobile }) => {
 		setChecked([]);
 	};
 
-	const handleChange = (evt) => {
+	const getNameValueCategory = (evt) => {
 		let { name, value } = evt.target;
 		let category;
 
@@ -34,7 +32,11 @@ const FilterPanel = ({ setFiltered, filterData, setFilterData, mobile }) => {
 			name = name.slice(7);
 			category = "amount";
 		}
+		return { name, value, category };
+	};
 
+	const handleChange = (evt) => {
+		const { name, value, category } = getNameValueCategory(evt);
 		setFilterData((filterData) => {
 			if (ALL_MACROS.includes(name)) {
 				return {

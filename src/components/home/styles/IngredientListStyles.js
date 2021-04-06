@@ -2,6 +2,11 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles(() => ({
 	submitBtn: {
+		position: "absolute",
+		bottom: "0",
+		width: "100%",
+		height: "10%",
+		boxShadow: "-2px 0px 8px rgba(0,0,0,0.5)",
 		backgroundColor: "#4caf50",
 		color: "#fff",
 		"&:hover": {
@@ -56,5 +61,16 @@ export const useStyles = makeStyles(() => ({
 		height: "100%",
 		width: "100%",
 		position: "relative",
+	},
+	ingredientListContainer: {
+		height: "87%",
+		width: "100%",
+		backgroundColor: "rgba(255,255,255,0.5)",
+	},
+	ingredientList: {
+		display: "flex",
+		justifyContent: "center",
+		flexWrap: "wrap",
+		margin: "10px",
 	},
 }));

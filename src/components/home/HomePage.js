@@ -11,14 +11,13 @@ import { INITIAL_FILTER_DATA } from "../../constants";
 const HomePage = () => {
 	const classes = useStyles();
 	const dispatch = useDispatch();
+	const { height, width } = useWindowDimensions();
 
 	const feed = useSelector((state) => state.feed, shallowEqual);
 	const page = useSelector((state) => state.page, shallowEqual);
 	const totalResults = useSelector((state) => state.totalResults, shallowEqual);
 
-	const { height, width } = useWindowDimensions();
 	const [filtered, setFiltered] = useState(false);
-
 	const [filterData, setFilterData] = useState(INITIAL_FILTER_DATA);
 
 	useEffect(() => {
@@ -45,19 +44,9 @@ const HomePage = () => {
 						setFiltered={setFiltered}
 						filterData={filterData}
 						setFilterData={setFilterData}
+						mobile={width < 599}
 					/>
-					<div
-						style={{
-							width: "100%",
-							backgroundColor: "white",
-							display: "flex",
-							flexDirection: "column",
-							justifyContent: "space-around",
-							alignItems: "center",
-							borderRadius: "5px",
-							margin: "0 0 10px 0",
-						}}
-					>
+					<div className={classes.mainContent}>
 						<Pagination
 							variant="outlined"
 							count={Math.ceil(totalResults / 40)}

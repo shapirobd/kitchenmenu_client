@@ -62,13 +62,3 @@ const unbookmarkedRecipe = (recipeId) => {
 		},
 	};
 };
-
-// retrieves all recipes from the database that have been bookmarked by a given user
-// returns array of recipe ids
-
-// export const getAllBookmarks = async (username) => {
-// 	const bookmarks = await axios.get(`${API_URL}/users/getAllBookmarks`, {
-// 		params: { username },
-// 	});
-// 	return bookmarks;
-// };

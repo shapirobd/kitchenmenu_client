@@ -22,21 +22,8 @@ const IngredientList = ({
 					Selected Ingredients
 				</Typography>
 				<Divider style={{ width: "100%" }} />
-				<div
-					style={{
-						height: "87%",
-						width: "100%",
-						backgroundColor: "rgba(255,255,255,0.5)",
-					}}
-				>
-					<div
-						style={{
-							display: "flex",
-							justifyContent: "center",
-							flexWrap: "wrap",
-							margin: "10px",
-						}}
-					>
+				<div className={classes.ingredientListContainer}>
+					<div className={classes.ingredientList}>
 						{ingredients.map((ingredient) => (
 							<Chip
 								key={ingredient}
@@ -51,13 +38,6 @@ const IngredientList = ({
 					type="submit"
 					onClick={handleSubmit}
 					className={classes.submitBtn}
-					style={{
-						position: "absolute",
-						bottom: "0",
-						width: "100%",
-						height: "10%",
-						boxShadow: "-2px 0px 8px rgba(0,0,0,0.5)",
-					}}
 				>
 					Submit
 				</Button>

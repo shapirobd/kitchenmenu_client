@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { Grid, Typography } from "@material-ui/core";
 import { useStyles } from "./styles/WelcomePageStyles";
 import RecipeGrid from "../recipes/RecipeGrid";
 import IngredientInput from "./IngredientInput";
 import IngredientList from "./IngredientList";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import $ from "jquery";
+import { scrollToResults } from "./helpers/scrollToResults";
+import { getResults } from "./helpers/getResults";
 
 const WelcomePage = () => {
 	const classes = useStyles();
@@ -18,18 +17,6 @@ const WelcomePage = () => {
 	const [ingredients, setIngredients] = useState([]);
 	const [formSubmitted, setFormSubmitted] = useState(false);
 	const [results, setResults] = useState(undefined);
-
-	const scrollToResults = () => {
-		$(".makeStyles-root-13").animate(
-			{ scrollTop: $(".makeStyles-root-22").height() },
-			1000
-		);
-		$(".makeStyles-mobileRoot-23").animate(
-			{ scrollTop: $(".makeStyles-mobileRoot-23").height() },
-			1000
-		);
-		$(this).remove();
-	};
 
 	const handleChange = (evt) => {
 		setFormData(evt.target.value);
@@ -53,27 +40,10 @@ const WelcomePage = () => {
 
 	useEffect(() => {
 		if (formSubmitted) {
-			setResults(undefined);
-			const getResults = async () => {
-				try {
-					const ingredientsParams = ingredients.join(",");
-					const recipes = await axios.get(
-						"https://api.spoonacular.com/recipes/findByIngredients",
-						{
-							params: {
-								apiKey: "73baf9bb95a14f5fb4d71e2f12ab8479",
-								offset: 0,
-								number: 900,
-								ingredients: ingredientsParams,
-							},
-						}
-					);
-					setResults(recipes.data);
-				} catch (e) {
-					console.error(e);
-				}
-			};
-			getResults();
+			if (results) {
+				setResults(undefined);
+			}
+			getResults(ingredients, setResults);
 		}
 	}, [formSubmitted]);
 
@@ -109,19 +79,7 @@ const WelcomePage = () => {
 				mobile={width <= 599}
 			/>
 			{formSubmitted ? (
-				<div
-					style={{
-						position: "absolute",
-						width: "100%",
-						height: "100%",
-						backgroundColor: "rgba(0,0,0,0.3)",
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "center",
-						justifyContent: "center",
-					}}
-				>
-					{console.log("circular")}
+				<div className={classes.circularProgressContainer}>
 					<CircularProgress
 						size={50}
 						classes={{ root: classes.circularProgress }}
@@ -130,20 +88,7 @@ const WelcomePage = () => {
 			) : null}
 			{results ? (
 				results.length ? (
-					<div
-						style={{
-							width: "100%",
-							backgroundColor: "#fff",
-							display: "flex",
-							flexDirection: "column",
-							justifyContent: "space-around",
-							alignItems: "center",
-							borderRadius: "5px",
-							margin: "0 0 10px 0",
-							paddingBottom: "30px",
-						}}
-						className="results"
-					>
+					<div className={classes.results}>
 						<Grid
 							item
 							cols={2}
@@ -159,15 +104,7 @@ const WelcomePage = () => {
 						</Grid>
 					</div>
 				) : (
-					<div
-						style={{
-							width: "100%",
-							height: "80px",
-							display: "flex",
-							flexDirection: "column",
-							justifyContent: "center",
-						}}
-					>
+					<div className={classes.missingIngredientsBanner}>
 						<Typography
 							style={{
 								color: "red",

@@ -24,16 +24,7 @@ const IngredientInput = ({
 			sm={8}
 			className={mobile ? classes.topGridItem : classes.leftGridItem}
 		>
-			<form
-				style={{
-					width: "100%",
-					height: "100%",
-					display: "flex",
-					flexDirection: "column",
-					justifyContent: "center",
-					alignItems: "center",
-				}}
-			>
+			<form className={classes.form}>
 				<div className={mobile ? classes.mobileMain : classes.main}>
 					<Typography
 						variant={mobile ? "h5" : "h4"}
@@ -45,7 +36,6 @@ const IngredientInput = ({
 						<TextField
 							variant="outlined"
 							size="small"
-							// className={classes.textField}
 							onChange={handleChange}
 							value={formData}
 							error={ingredients.includes(formData)}

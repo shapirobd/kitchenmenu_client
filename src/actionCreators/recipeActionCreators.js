@@ -109,63 +109,6 @@ export const getRecipesByIngredients = (ingredients) => {
 	};
 };
 
-// export const getRecipesByKeywords = (keywords) => {
-// 	return async (dispatch) => {
-// 		try {
-// 			const ingredientsParams = ingredients.join(",");
-// 			const recipes = await axios.get(
-// 				"https://api.spoonacular.com/recipes/findByIngredients",
-// 				{
-// 					params: {
-// 						apiKey: "73baf9bb95a14f5fb4d71e2f12ab8479",
-// 						offset: 0,
-// 						number: 6900,
-// 						query: keywords,
-// 					},
-// 				}
-// 			);
-// 			dispatch(
-// 				filteredFeed({ results: recipes.data, totalResults: recipes.length })
-// 			);
-// 		} catch (e) {
-// 			console.error(e);
-// 		}
-// 	};
-// };
-
-// const gotRecipesByIngredients = (results) => {
-// 	return {
-// 		type: FILTER_BY_INGREDIENTS,
-// 		payload: { recipes: data.results, totalResults: data.totalResults },
-// 	};
-// };
-
-// export const filterFeed = (filterData, page = 1) => {
-// 	return async (dispatch) => {
-// 		try {
-// 			const { diets, macros, recipeName } = filterData;
-// 			const macrosParams = createMacrosParams(macros);
-// 			const dietsParams = diets.join(",");
-// 			const recipes = await axios.get(
-// 				"https://api.spoonacular.com/recipes/complexSearch",
-// 				{
-// 					params: {
-// 						apiKey: "73baf9bb95a14f5fb4d71e2f12ab8479",
-// 						offset: 40 * (page - 1),
-// 						number: 40,
-// 						diet: dietsParams,
-// 						...macrosParams,
-// 						query: recipeName,
-// 					},
-// 				}
-// 			);
-// 			dispatch(filteredFeed(recipes.data, page));
-// 		} catch (e) {
-// 			console.error(e);
-// 		}
-// 	};
-// };
-
 // returns action containing information to include in redux state's feed, totalResults, and page
 const filteredFeed = (data, page) => {
 	return {

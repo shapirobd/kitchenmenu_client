@@ -21,4 +21,32 @@ export const useStyles = makeStyles(() => ({
 	circularProgress: {
 		color: "#a5d6a7",
 	},
+	circularProgressContainer: {
+		position: "absolute",
+		width: "100%",
+		height: "100%",
+		backgroundColor: "rgba(0,0,0,0.3)",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		justifyContent: "center",
+	},
+	results: {
+		width: "100%",
+		backgroundColor: "#fff",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "space-around",
+		alignItems: "center",
+		borderRadius: "5px",
+		margin: "0 0 10px 0",
+		paddingBottom: "30px",
+	},
+	missingIngredientsBanner: {
+		width: "100%",
+		height: "80px",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+	},
 }));
