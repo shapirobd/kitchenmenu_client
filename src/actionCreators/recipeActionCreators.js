@@ -14,7 +14,7 @@ export const loadFeed = (page = 1, filterData = { diets: [], macros: {} }) => {
 				"https://api.spoonacular.com/recipes/complexSearch",
 				{
 					params: {
-						apiKey: "73baf9bb95a14f5fb4d71e2f12ab8479",
+						apiKey: process.env.REACT_APP_SPOON_API_KEY,
 						offset: 40 * (page - 1),
 						number: 40,
 						diet: dietsParams,
@@ -53,7 +53,7 @@ export const loadRecipe = (recipeId) => {
 				`https://api.spoonacular.com/recipes/${recipeId}/information`,
 				{
 					params: {
-						apiKey: "73baf9bb95a14f5fb4d71e2f12ab8479",
+						apiKey: process.env.REACT_APP_SPOON_API_KEY,
 						includeNutrition: true,
 					},
 				}
@@ -62,7 +62,7 @@ export const loadRecipe = (recipeId) => {
 				`https://api.spoonacular.com/recipes/${recipeId}/analyzedInstructions`,
 				{
 					params: {
-						apiKey: "73baf9bb95a14f5fb4d71e2f12ab8479",
+						apiKey: process.env.REACT_APP_SPOON_API_KEY,
 						stepBreakdown: true,
 					},
 				}
@@ -93,7 +93,7 @@ export const getRecipesByIngredients = (ingredients) => {
 				"https://api.spoonacular.com/recipes/findByIngredients",
 				{
 					params: {
-						apiKey: "73baf9bb95a14f5fb4d71e2f12ab8479",
+						apiKey: process.env.REACT_APP_SPOON_API_KEY,
 						offset: 0,
 						number: 6900,
 						ingredients: ingredientsParams,

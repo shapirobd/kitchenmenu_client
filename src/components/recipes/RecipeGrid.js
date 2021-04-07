@@ -8,7 +8,6 @@ import useWindowDimensions from "../../customHooks/getWindowDimensions";
 
 const RecipeGrid = ({ feed, areBookmarks, removeBookmark, ingredients }) => {
 	const classes = useStyles();
-
 	const { width } = useWindowDimensions();
 
 	if (ingredients) {
@@ -34,9 +33,6 @@ const RecipeGrid = ({ feed, areBookmarks, removeBookmark, ingredients }) => {
 						key={recipe.image}
 						style={{
 							position: "relative",
-							// backgroundImage: width <= 599 ? `url(${recipe.image})` : null,
-							// backgroundSize: width <= 599 ? "cover" : null,
-							// backgroundOrigin: width <= 599 ? "content-box" : null,
 							margin: width <= 599 ? "5px 0" : 0,
 						}}
 					>
@@ -53,12 +49,7 @@ const RecipeGrid = ({ feed, areBookmarks, removeBookmark, ingredients }) => {
 							/>
 						) : null}
 						{areBookmarks ? (
-							<div
-								style={{
-									position: "absolute",
-									right: 0,
-								}}
-							>
+							<div className={classes.fabContainer}>
 								<Fab
 									color="secondary"
 									size="small"
@@ -70,23 +61,13 @@ const RecipeGrid = ({ feed, areBookmarks, removeBookmark, ingredients }) => {
 							</div>
 						) : null}
 						<Link to={`/recipes/${recipe.id}`} {...getLinkProps(recipe.id)}>
-							{/* {width > 599 ? ( */}
-							<div
-								style={{
-									height: "100%",
-									width: "100%",
-									display: "flex",
-									alignItems: "center",
-								}}
-							>
+							<div className={classes.imgContainer}>
 								<img
 									src={recipe.image}
 									alt={recipe.title}
 									className={classes.img}
 								/>
 							</div>
-
-							{/* ) : null} */}
 							<GridListTileBar title={recipe.title} />
 						</Link>
 					</GridListTile>

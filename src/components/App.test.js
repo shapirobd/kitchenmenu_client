@@ -22,7 +22,10 @@ const user = {
 	calorie_goal: "2000",
 };
 
-const token = jwt.sign({ username: user.username }, process.env.SECRET_KEY);
+const token = jwt.sign(
+	{ username: user.username },
+	process.env.REACT_APP_SECRET_KEY
+);
 
 beforeAll(async () => {
 	await axios.delete(`http://localhost:5000/users/${user.username}`);

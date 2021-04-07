@@ -17,9 +17,9 @@ import RecipeSteps from "./RecipeSteps";
 import RecipeIngredients from "./RecipeIngredients";
 import { generateMacros } from "../../helpers/generateMacros";
 import { Typography, Grid, Button, ButtonGroup } from "@material-ui/core";
-import axios from "axios";
 import convertDate from "../../helpers/convertDate";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
+import { getRecipe } from "./helpers/getRecipe";
 
 const Recipe = ({ user }) => {
 	const classes = useStyles();
@@ -37,8 +37,8 @@ const Recipe = ({ user }) => {
 			? false
 			: eatenMeals[convertDate()].includes(+recipeId)
 	);
-
 	const [currentRecipe, setCurrentRecipe] = useState(null);
+
 	const toggleEaten = () => {
 		if (!user.username) {
 			history.push("/signup");
@@ -76,35 +76,7 @@ const Recipe = ({ user }) => {
 	};
 
 	useEffect(() => {
-		const getRecipe = async () => {
-			try {
-				const recipe = await axios.get(
-					`https://api.spoonacular.com/recipes/${recipeId}/information`,
-					{
-						params: {
-							apiKey: "73baf9bb95a14f5fb4d71e2f12ab8479",
-							includeNutrition: true,
-						},
-					}
-				);
-				const instructions = await axios.get(
-					`https://api.spoonacular.com/recipes/${recipeId}/analyzedInstructions`,
-					{
-						params: {
-							apiKey: "73baf9bb95a14f5fb4d71e2f12ab8479",
-							stepBreakdown: true,
-						},
-					}
-				);
-				setCurrentRecipe({
-					recipe: recipe.data,
-					instructions: instructions.data,
-				});
-			} catch (e) {
-				console.error(e);
-			}
-		};
-		getRecipe();
+		getRecipe(recipeId, setCurrentRecipe);
 	}, [recipeId]);
 
 	return (
@@ -143,7 +115,6 @@ const Recipe = ({ user }) => {
 						<Grid item xs={12} md={4} className={classes.infoPanel}>
 							<DietList diets={currentRecipe.recipe.diets} />
 							<PieChart
-								title="Caloric Breakdown"
 								caloricBreakdown={
 									currentRecipe.recipe.nutrition.caloricBreakdown
 								}

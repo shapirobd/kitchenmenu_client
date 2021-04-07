@@ -18,7 +18,6 @@ const BookmarkTile = ({ user, recipe, removeBookmark }) => {
 	return (
 		<Badge
 			badgeContent={<ClearIcon className={classes.icon} />}
-			// color="secondary"
 			className={classes.badge}
 			onClick={handleClick}
 		>

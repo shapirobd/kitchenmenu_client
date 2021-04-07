@@ -12,7 +12,6 @@ export const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		flexDirection: "row",
 		width: "100%",
-		// justifyContent: "center",
 		alignItems: "center",
 	},
 	icon: {
@@ -21,7 +20,12 @@ export const useStyles = makeStyles((theme) => ({
 	img: {
 		minWidth: "100%",
 		minHeight: "100%",
-		// boxSizing: "content-box",
+	},
+	imgContainer: {
+		height: "100%",
+		width: "100%",
+		display: "flex",
+		alignItems: "center",
 	},
 	missingIngredients0: {
 		top: 0,
@@ -73,5 +77,9 @@ export const useStyles = makeStyles((theme) => ({
 		borderRadius: 0,
 		width: "40px",
 		height: "20px",
+	},
+	fabContainer: {
+		position: "absolute",
+		right: 0,
 	},
 }));

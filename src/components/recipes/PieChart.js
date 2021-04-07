@@ -1,10 +1,9 @@
 import React from "react";
-// import { CanvasJSChart } from "canvasjs-react-charts";
 import { useStyles } from "./styles/PieChartStyles";
 import { Doughnut } from "react-chartjs-2";
 import { Typography } from "@material-ui/core";
 
-const PieChart = ({ title, caloricBreakdown }) => {
+const PieChart = ({ caloricBreakdown }) => {
 	const { percentFat, percentCarbs, percentProtein } = caloricBreakdown;
 	const classes = useStyles();
 

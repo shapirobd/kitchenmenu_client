@@ -4,9 +4,7 @@ import {
 	Typography,
 	List,
 	ListItem,
-	ListItemAvatar,
 	ListItemText,
-	Avatar,
 	Divider,
 } from "@material-ui/core";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
