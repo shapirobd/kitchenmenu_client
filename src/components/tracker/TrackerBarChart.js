@@ -4,6 +4,7 @@ import { useStyles } from "./styles/TrackerBarChartStyles";
 import { Bar, HorizontalBar } from "react-chartjs-2";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
+import { verticalBarOptions, horizontalBarOptions } from "./helpers/barOptions";
 
 const TrackerBarChart = ({ weekState, barChartData }) => {
 	const classes = useStyles();
@@ -23,37 +24,12 @@ const TrackerBarChart = ({ weekState, barChartData }) => {
 							No data for the selected week
 						</Typography>
 					) : width <= 599 ? (
-						<HorizontalBar
-							data={barChartData}
-							// className={classes.horizontalBarChart}
-							options={{
-								scales: {
-									xAxes: [
-										{
-											ticks: {
-												beginAtZero: true,
-											},
-										},
-									],
-								},
-								maintainAspectRatio: false,
-							}}
-						/>
+						<HorizontalBar data={barChartData} options={horizontalBarOptions} />
 					) : (
 						<Bar
 							data={barChartData}
 							className={classes.barChart}
-							options={{
-								scales: {
-									yAxes: [
-										{
-											ticks: {
-												beginAtZero: true,
-											},
-										},
-									],
-								},
-							}}
+							options={verticalBarOptions}
 						/>
 					)}
 				</>

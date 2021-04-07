@@ -4,22 +4,17 @@ import { Grid } from "@material-ui/core";
 import { useStyles } from "./styles/TrackerPageStyles";
 import "react-calendar/dist/Calendar.css";
 import convertDate from "../../helpers/convertDate";
-import { getPieChartData, getDateMacros } from "./helpers/dailyHelpers";
-import {
-	getBarChartData,
-	getWeekNumber,
-	getWeekDates,
-	getWeekMacros,
-} from "./helpers/weeklyHelpers";
+import { getPieChartData } from "./helpers/dailyHelpers";
+import { getBarChartData, getWeekDates } from "./helpers/weeklyHelpers";
 import TrackerCalendar from "./TrackerCalendar";
 import TrackerDoughnut from "./TrackerDoughnut";
 import TrackerBarChart from "./TrackerBarChart";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
+import { updateWeekState } from "./helpers/updateWeekState";
 
 const TrackerPage = () => {
 	const classes = useStyles();
 	const { width } = useWindowDimensions();
-
 	const user = useSelector((state) => state.user);
 
 	const [calendarDate, setCalendarDate] = useState(new Date());
@@ -52,26 +47,7 @@ const TrackerPage = () => {
 	}, [weekState.weekData]);
 
 	useEffect(() => {
-		const updateWeekState = async () => {
-			getDateMacros(user, "day", convertDate(calendarDate), setDayState);
-			const weekData = await getWeekMacros(user, getWeekDates(calendarDate));
-			let empty = true;
-			Object.values(weekData).map((date) => {
-				if (empty && (date.carbs || date.fat || date.protein)) {
-					empty = false;
-				}
-			});
-			if (getWeekNumber(calendarDate) !== weekState.weekNumber) {
-				setWeekState({
-					empty,
-					loaded: true,
-					weekNumber: getWeekNumber(calendarDate),
-					dates: getWeekDates(calendarDate),
-					weekData,
-				});
-			}
-		};
-		updateWeekState();
+		updateWeekState(user, calendarDate, setDayState, weekState, setWeekState);
 	}, [calendarDate, weekState, user]);
 
 	useEffect(() => {
