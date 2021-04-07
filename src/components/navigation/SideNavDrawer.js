@@ -14,16 +14,17 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import KitchenIcon from "@material-ui/icons/Kitchen";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import GridOnIcon from "@material-ui/icons/GridOn";
+import { toggleDrawer } from "./helpers/toggleDrawer";
 
-const SideNavDrawer = ({ state, toggleDrawer, user, mobile }) => {
+const SideNavDrawer = ({ setState, state, user }) => {
 	const classes = useStyles();
 
 	return (
 		<SwipeableDrawer
 			anchor={"left"}
 			open={state["left"]}
-			onClose={toggleDrawer("left", false)}
-			onOpen={toggleDrawer("left", true)}
+			onClose={toggleDrawer("left", false, setState)}
+			onOpen={toggleDrawer("left", true, setState)}
 			className={classes.drawer}
 			classes={{
 				paper: classes.drawerPaper,

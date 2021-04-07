@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
-import {
-	AppBar,
-	Toolbar,
-	Button,
-	InputBase,
-	IconButton,
-} from "@material-ui/core";
-import SearchIcon from "@material-ui/icons/Search";
+import { AppBar, Toolbar, Button, IconButton } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useStyles } from "./styles/NavBarStyles";
 import logo from "../../images/logo.png";
@@ -16,6 +9,9 @@ import { logout } from "../../actionCreators/userActionCreators";
 import { loadFeed } from "../../actionCreators/recipeActionCreators";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
 import SideNavDrawer from "./SideNavDrawer";
+import SearchBar from "./SearchBar";
+import UserOptions from "./UserOptions";
+import { toggleDrawer } from "./helpers/toggleDrawer";
 
 const NavBar = () => {
 	const classes = useStyles();
@@ -27,6 +23,9 @@ const NavBar = () => {
 	const user = useSelector((state) => state.user);
 
 	const [searchData, setSearchData] = useState("");
+	const [state, setState] = useState({
+		left: false,
+	});
 
 	const handleLogout = (evt) => {
 		evt.preventDefault();
@@ -46,21 +45,6 @@ const NavBar = () => {
 		}
 	};
 
-	const [state, setState] = React.useState({
-		left: false,
-	});
-
-	const toggleDrawer = (anchor, open) => (event) => {
-		if (
-			event &&
-			event.type === "keydown" &&
-			(event.key === "Tab" || event.key === "Shift")
-		) {
-			return;
-		}
-		setState({ ...state, [anchor]: open });
-	};
-
 	return (
 		<div className={classes.root}>
 			<AppBar position="fixed" className={classes.appBar}>
@@ -72,85 +56,26 @@ const NavBar = () => {
 								className={classes.menuButton}
 								color="inherit"
 								aria-label="open drawer"
-								onClick={toggleDrawer("left", true)}
+								onClick={toggleDrawer("left", true, setState)}
 							>
 								<MenuIcon />
 							</IconButton>
-							<SideNavDrawer
-								state={state}
-								toggleDrawer={toggleDrawer}
-								user={user}
-								mobile={true}
-							/>
+							<SideNavDrawer state={state} setState={setState} user={user} />
 						</>
 					) : null}
+
 					{width > 599 ? (
 						<Link to="/" className={`${classes.navLink} ${classes.title}`}>
 							<img className={classes.logo} src={logo} alt={logo} />
 						</Link>
 					) : null}
 
-					<form
-						className={width <= 599 ? classes.searchMobile : classes.search}
-						onSubmit={handleSearch}
-					>
-						<div className={classes.searchIcon}>
-							<SearchIcon />
-						</div>
-						<InputBase
-							placeholder="Search…"
-							classes={{
-								root: classes.inputRoot,
-								input: classes.input,
-							}}
-							inputProps={{ "aria-label": "search" }}
-							onChange={handleChange}
-						/>
-					</form>
-					<div
-						style={
-							width > 599
-								? { float: "right" }
-								: {
-										width: "50%",
-										float: "right",
-										display: "flex",
-										flexDirection: "row",
-										justifyContent: "flex-end",
-								  }
-						}
-					>
-						{user ? (
-							<>
-								<Button
-									onClick={handleLogout}
-									color="inherit"
-									className={classes.navLink}
-								>
-									Logout
-								</Button>
-							</>
-						) : (
-							<>
-								<Link
-									to="/login"
-									className={classes.navLink}
-									// style={{ width: "50%" }}
-								>
-									<Button color="inherit">Login</Button>
-								</Link>
-								<Link
-									to="/signup"
-									className={classes.navLink}
-									// style={{ width: "50%" }}
-								>
-									<Button color="inherit" className={classes.signupBtn}>
-										Sign up
-									</Button>
-								</Link>
-							</>
-						)}
-					</div>
+					<SearchBar handleSearch={handleSearch} handleChange={handleChange} />
+					<UserOptions
+						mobile={width <= 599}
+						user={user}
+						handleLogout={handleLogout}
+					/>
 				</Toolbar>
 			</AppBar>
 		</div>
