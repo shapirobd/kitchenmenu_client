@@ -16,6 +16,8 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import GridOnIcon from "@material-ui/icons/GridOn";
 import { toggleDrawer } from "./helpers/toggleDrawer";
 
+// Side navigation menu that contains links to take you to the different routes
+// within the app
 const SideNavDrawer = ({ setState, state, user }) => {
 	const classes = useStyles();
 

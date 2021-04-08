@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import SideNavDrawer from "./SideNavDrawer";
 import { toggleDrawer } from "./helpers/toggleDrawer";
 
+// Contains button that can be clicked to display the SideNavDrawer
 const SideNav = () => {
 	const classes = useStyles();
 	const [state, setState] = React.useState({

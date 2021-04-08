@@ -13,6 +13,8 @@ import SearchBar from "./SearchBar";
 import UserOptions from "./UserOptions";
 import { toggleDrawer } from "./helpers/toggleDrawer";
 
+// Top navigation bar that allows user to search for recipes by name,
+// login/logout/register, and go to the home page
 const NavBar = () => {
 	const classes = useStyles();
 	const dispatch = useDispatch();
@@ -27,16 +29,21 @@ const NavBar = () => {
 		left: false,
 	});
 
+	// removes the user from redux state and redirects to home page
 	const handleLogout = (evt) => {
 		evt.preventDefault();
 		dispatch(logout());
 		history.push("/");
 	};
 
+	// updates searchData state to match user input from search bar
 	const handleChange = (evt) => {
 		setSearchData(evt.target.value);
 	};
 
+	// when the user searches for recipes by name, this function updates the feed
+	// from redux state to include only recipes that contain the search term and
+	// redirects to the home page if the user is not already there
 	const handleSearch = (evt) => {
 		evt.preventDefault();
 		dispatch(loadFeed(1, { diets: [], macros: {}, recipeName: searchData }));

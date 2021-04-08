@@ -4,6 +4,7 @@ import useWindowDimensions from "../../customHooks/getWindowDimensions";
 import SearchIcon from "@material-ui/icons/Search";
 import { InputBase } from "@material-ui/core";
 
+// Form that contains search bar allowing user to search for recipes by name
 const SearchBar = ({ handleSearch, handleChange }) => {
 	const classes = useStyles();
 	const { width } = useWindowDimensions();
@@ -17,7 +18,7 @@ const SearchBar = ({ handleSearch, handleChange }) => {
 				<SearchIcon />
 			</div>
 			<InputBase
-				placeholder="Search…"
+				placeholder="Search by name…"
 				classes={{
 					root: classes.inputRoot,
 					input: classes.input,

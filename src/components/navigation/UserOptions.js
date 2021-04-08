@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import { useStyles } from "./styles/UserOptionsStyles";
 
+// Contains buttons for the top nav bar that allow the user to login/logout/register
 const UserOptions = ({ mobile, user, handleLogout }) => {
 	const classes = useStyles();
 
