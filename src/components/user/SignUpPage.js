@@ -1,38 +1,27 @@
 import React, { useState } from "react";
 import { useStyles } from "./styles/SignUpPageStyles";
-import Stepper from "@material-ui/core/Stepper";
-import Step from "@material-ui/core/Step";
-import StepLabel from "@material-ui/core/StepLabel";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { register } from "../../actionCreators/userActionCreators";
-import { getStepContent, getSteps } from "../../helpers/signUpHelpers";
+import { getStepContent, getSteps } from "./helpers/signUpHelpers";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
+import { isDataMissing } from "./helpers/isDataMissing";
+import { INITIAL_SIGN_UP_FORM_DATA } from "./helpers/initialSignUpFormData";
+import SignUpStepper from "./SignUpStepper";
+import SignUpButtons from "./SignUpButtons";
 
 const SignUpPage = () => {
 	const classes = useStyles();
 	const { width } = useWindowDimensions();
+	const history = useHistory();
+	const dispatch = useDispatch();
+	const steps = getSteps();
 
 	const [activeStep, setActiveStep] = React.useState(0);
 	const [skipped, setSkipped] = React.useState(new Set());
-	const steps = getSteps();
-
-	const history = useHistory();
-	const dispatch = useDispatch();
-
-	const INITIAL_FORM_DATA = {
-		first_name: "",
-		last_name: "",
-		username: "",
-		email: "",
-		password: "",
-		weight: null,
-		weight_goal: null,
-		calorie_goal: null,
-	};
-	const [formData, setFormData] = useState(INITIAL_FORM_DATA);
+	const [formData, setFormData] = useState(INITIAL_SIGN_UP_FORM_DATA);
 	const [missingData, setMissingData] = useState({
 		first_name: false,
 		last_name: false,
@@ -67,20 +56,7 @@ const SignUpPage = () => {
 	};
 
 	const handleNext = () => {
-		let dataMissing = false;
-		Object.keys(missingData).map((fieldName) => {
-			let isMissing;
-			if (formData[fieldName] === "") {
-				dataMissing = true;
-				isMissing = true;
-			} else {
-				isMissing = false;
-			}
-			setMissingData((missingData) => ({
-				...missingData,
-				[fieldName]: isMissing,
-			}));
-		});
+		let dataMissing = isDataMissing(missingData, formData, setMissingData);
 		if (dataMissing) return;
 
 		let newSkipped = skipped;
@@ -88,7 +64,6 @@ const SignUpPage = () => {
 			newSkipped = new Set(newSkipped.values());
 			newSkipped.delete(activeStep);
 		}
-
 		setActiveStep((prevActiveStep) => prevActiveStep + 1);
 		setSkipped(newSkipped);
 	};
@@ -116,33 +91,12 @@ const SignUpPage = () => {
 
 	return (
 		<div className={width > 599 ? classes.main : classes.mobileMain}>
-			<Stepper
+			<SignUpStepper
 				activeStep={activeStep}
-				style={{ backgroundColor: "rgba(0,0,0,0)", padding: "20px 0 0 0" }}
-			>
-				{steps.map((label, index) => {
-					const stepProps = {};
-					const labelProps = {};
-					if (isStepOptional(index)) {
-						labelProps.optional = (
-							<Typography variant="caption">Optional</Typography>
-						);
-					}
-					if (isStepSkipped(index)) {
-						stepProps.completed = false;
-					}
-					return (
-						<Step key={label} {...stepProps} classes={{ root: classes.root }}>
-							<StepLabel
-								{...labelProps}
-								classes={{ root: classes.root, label: classes.label }}
-							>
-								{label}
-							</StepLabel>
-						</Step>
-					);
-				})}
-			</Stepper>
+				steps={steps}
+				isStepOptional={isStepOptional}
+				isStepSkipped={isStepSkipped}
+			/>
 			<div>
 				{activeStep === steps.length ? (
 					<div>
@@ -164,39 +118,15 @@ const SignUpPage = () => {
 								missingData
 							)}
 						</Typography>
-						<div>
-							<div style={{ float: "right" }}>
-								<Button
-									disabled={activeStep === 0}
-									onClick={handleBack}
-									className={classes.button}
-								>
-									Back
-								</Button>
-								{isStepOptional(activeStep) && (
-									<Button
-										variant="contained"
-										color="primary"
-										onClick={handleSkip}
-										className={`${classes.button} ${classes.skipButton}`}
-									>
-										Skip
-									</Button>
-								)}
-
-								<Button
-									variant="contained"
-									color="primary"
-									label="nextBtn"
-									onClick={
-										activeStep === steps.length - 1 ? handleSubmit : handleNext
-									}
-									className={`${classes.button} ${classes.nextButton}`}
-								>
-									{activeStep === steps.length - 1 ? "Finish" : "Next"}
-								</Button>
-							</div>
-						</div>
+						<SignUpButtons
+							steps={steps}
+							isStepOptional={isStepOptional}
+							activeStep={activeStep}
+							handleBack={handleBack}
+							handleSkip={handleSkip}
+							handleSubmit={handleSubmit}
+							handleNext={handleNext}
+						/>
 					</div>
 				)}
 			</div>

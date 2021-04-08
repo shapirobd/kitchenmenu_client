@@ -1,6 +1,6 @@
-import SignUpFormOne from "../components/user/SignUpFormOne";
-import SignUpFormTwo from "../components/user/SignUpFormTwo";
-import SignUpConfirmation from "../components/user/SignUpConfirmation";
+import SignUpFormOne from "../SignUpFormOne";
+import SignUpFormTwo from "../SignUpFormTwo";
+import SignUpConfirmation from "../SignUpConfirmation";
 
 /**
  * @returns array with titles for each step of the sign up process
@@ -46,11 +46,7 @@ export const getStepContent = (
 		case 2:
 			return (
 				<>
-					<SignUpConfirmation
-						handleChange={handleChange}
-						handleSubmit={handleSubmit}
-						formData={formData}
-					/>
+					<SignUpConfirmation handleSubmit={handleSubmit} formData={formData} />
 				</>
 			);
 		default:

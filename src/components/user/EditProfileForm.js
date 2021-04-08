@@ -3,14 +3,7 @@ import { useStyles } from "./styles/EditProfileFormStyles";
 import { TextField, Button } from "@material-ui/core";
 import { editProfile } from "../../actionCreators/userActionCreators";
 import { useDispatch, useSelector } from "react-redux";
-
-const capitalize = (text) => {
-	return text
-		.replace("_", " ")
-		.split(" ")
-		.map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-		.join(" ");
-};
+import { capitalize } from "./helpers/capitalize";
 
 const EditProfileForm = ({ user, setEditting }) => {
 	const classes = useStyles();

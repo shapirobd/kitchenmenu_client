@@ -1,16 +1,9 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { useStyles } from "./styles/SignUpFormStyles";
+import { capitalize } from "./helpers/capitalize";
 
-const capitalize = (text) => {
-	return text
-		.replace("_", " ")
-		.split(" ")
-		.map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-		.join(" ");
-};
-
-const SignUpConfirmation = ({ handleSubmit, handleChange, formData }) => {
+const SignUpConfirmation = ({ handleSubmit, formData }) => {
 	const classes = useStyles();
 	return (
 		<form className={classes.form} onSubmit={handleSubmit}>
