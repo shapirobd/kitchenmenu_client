@@ -1,3 +1,12 @@
+/**
+ * Takes quantity of carbs, fat and protein that a user ate on a given date
+ * and determines what percentage of calories from that day are coming from each.
+ * Then, uses this information to generate configuration data for the doughnut chart.
+ * @param {Number} carbs
+ * @param {Number} fat
+ * @param {Number} protein
+ * @returns object containing data used to configure the doughnut chart from TrackerDoughnut
+ */
 export const getPieChartData = (carbs = 0, fat = 0, protein = 0) => {
 	const totalCals = carbs * 4 + fat * 9 + protein * 4;
 	const percentages = {
@@ -23,6 +32,20 @@ export const getPieChartData = (carbs = 0, fat = 0, protein = 0) => {
 	};
 };
 
+/**
+ * Given a user and date, this function determines the user's total intake for each
+ * macronutrient for that date.
+ * If we are using this function in the context of just one day,
+ * we update the value of dayState from TrackerPage to include the date and macros.
+ * If we are using this funciton in the context each day within the week,
+ * we simply return object containing macro quantities.
+ * @param {Object} user
+ * @param {String} context
+ * @param {Date} date
+ * @param {Function} setDayState
+ * @returns object containing user's total intake for each macro for the given date
+ * (if context doesn't equal week)
+ */
 export const getDateMacros = async (user, context, date, setDayState) => {
 	const meals = user.eatenMeals[date] || [];
 
@@ -48,6 +71,13 @@ export const getDateMacros = async (user, context, date, setDayState) => {
 	}
 };
 
+/**
+ * Given the name of a macronutrient and an array of meals that a user has eaten,
+ * return the total amount of the given macro that the user ate from among those meals.
+ * @param {String} macro
+ * @param {Array} meals
+ * @returns
+ */
 const getTotalMacro = (macro, meals) => {
 	return meals.reduce((total, meal) => {
 		return total + meal[macro];

@@ -4,7 +4,7 @@ import { Grid } from "@material-ui/core";
 import { useStyles } from "./styles/TrackerPageStyles";
 import "react-calendar/dist/Calendar.css";
 import convertDate from "../../helpers/convertDate";
-import { getPieChartData } from "./helpers/dailyHelpers";
+import { getPieChartData, getDateMacros } from "./helpers/dailyHelpers";
 import { getBarChartData, getWeekDates } from "./helpers/weeklyHelpers";
 import TrackerCalendar from "./TrackerCalendar";
 import TrackerDoughnut from "./TrackerDoughnut";
@@ -12,6 +12,10 @@ import TrackerBarChart from "./TrackerBarChart";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
 import { updateWeekState } from "./helpers/updateWeekState";
 
+// Component containing shows the user's macronutrient consumption based on
+// their eaten meals. The user can select a date from the calendar, and the
+// doughnut chart will update to show that day's total macro breakdown. Also
+// the bar chart will update to show the total macro breakdown for each day in that week
 const TrackerPage = () => {
 	const classes = useStyles();
 	const { width } = useWindowDimensions();
@@ -38,18 +42,21 @@ const TrackerPage = () => {
 	const [pieChartData, setPieChartData] = useState(undefined);
 	const [barChartData, setBarChartData] = useState(undefined);
 
-	useEffect(() => {
-		setPieChartData(getPieChartData());
-	}, []);
-
+	// when weekState.weekData is updated, update barChartData state to include data
+	// on macro intake for each day of the selected week
 	useEffect(() => {
 		setBarChartData(getBarChartData(weekState.weekData));
 	}, [weekState.weekData]);
 
+	// when the calendarDate changes, update weekState to include macro intake,
+	// dates and weekNumber for the week associated with the newly selected date
 	useEffect(() => {
-		updateWeekState(user, calendarDate, setDayState, weekState, setWeekState);
-	}, [calendarDate, weekState, user]);
+		getDateMacros(user, "day", convertDate(calendarDate), setDayState);
+		updateWeekState(user, calendarDate, weekState, setWeekState);
+	}, [calendarDate]);
 
+	// when dayState changes, update pieChartData to include data on the user's macro
+	// intake for that specific date
 	useEffect(() => {
 		setPieChartData(
 			getPieChartData(
@@ -59,10 +66,6 @@ const TrackerPage = () => {
 			)
 		);
 	}, [dayState]);
-
-	useEffect(() => {
-		setBarChartData(getBarChartData(weekState.weekData));
-	}, [weekState.weekData]);
 
 	return (
 		<div style={{ width: "100%" }}>

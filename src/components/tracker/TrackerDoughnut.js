@@ -4,6 +4,8 @@ import { useStyles } from "./styles/TrackerDoughnutStyles";
 import { Doughnut } from "react-chartjs-2";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
+// Component containing doughnut chart that displays total carb, fat and protein consumption
+// for the selected day from TrackerCalendar
 const TrackerDoughnut = ({ dayState, pieChartData }) => {
 	const classes = useStyles();
 

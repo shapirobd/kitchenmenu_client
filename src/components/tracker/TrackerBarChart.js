@@ -6,6 +6,8 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
 import { verticalBarOptions, horizontalBarOptions } from "./helpers/barOptions";
 
+// Component containing bar chart that displays total carb, fat and protein consumption
+// for each day of the week based on the user's eaten meals
 const TrackerBarChart = ({ weekState, barChartData }) => {
 	const classes = useStyles();
 	const { width } = useWindowDimensions();

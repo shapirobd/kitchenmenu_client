@@ -1,16 +1,21 @@
 import "react-calendar/dist/Calendar.css";
-import convertDate from "../../../helpers/convertDate";
-import { getDateMacros } from "./dailyHelpers";
 import { getWeekNumber, getWeekDates, getWeekMacros } from "./weeklyHelpers";
 
+/**
+ * Gets user's macro intake for the for the week associated with calendarDate,
+ * then uses this information to determine if any meals were tracked for that week.
+ * Then, if this is a new week that has been selected, update weekState.
+ * @param {Object} user
+ * @param {Date} calendarDate
+ * @param {Object} weekState
+ * @param {Function} setWeekState
+ */
 export const updateWeekState = async (
 	user,
 	calendarDate,
-	setDayState,
 	weekState,
 	setWeekState
 ) => {
-	getDateMacros(user, "day", convertDate(calendarDate), setDayState);
 	const weekData = await getWeekMacros(user, getWeekDates(calendarDate));
 	let empty = true;
 	Object.values(weekData).map((date) => {
