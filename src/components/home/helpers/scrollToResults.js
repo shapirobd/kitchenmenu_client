@@ -1,13 +1,13 @@
 import $ from "jquery";
 
-export const scrollToResults = () => {
-	$(".makeStyles-root-13").animate(
-		{ scrollTop: $(".makeStyles-root-22").height() },
-		1000
-	);
-	$(".makeStyles-mobileRoot-23").animate(
-		{ scrollTop: $(".makeStyles-mobileRoot-23").height() },
-		1000
-	);
-	$(this).remove();
+/**
+ * This function is called in KitchenPage once results are
+ * found and scrolls down to the top of the results
+ */
+export const scrollToResults = (mobile) => {
+	let container;
+	mobile
+		? (container = $("#kitchenContainer"))
+		: (container = $("#switchContainer"));
+	container.animate({ scrollTop: $("#kitchenContainer").height() }, 1000);
 };

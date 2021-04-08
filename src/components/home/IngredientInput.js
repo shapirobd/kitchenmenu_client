@@ -8,6 +8,8 @@ import {
 } from "@material-ui/core";
 import { useStyles } from "./styles/IngredientInputStyles";
 
+// includes the form where the user can type ingredients that they want
+// to base their search on
 const IngredientInput = ({
 	ingredients,
 	handleChange,

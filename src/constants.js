@@ -1,3 +1,4 @@
+// all diets in the correct format for Spoonacular API queries
 export const ALL_DIETS = [
 	"glutenFree",
 	"ketogenic",
@@ -14,6 +15,7 @@ export const ALL_DIETS = [
 
 export const ALL_MACROS = ["Fat", "Protein", "Carbohydrates"];
 
+// used for FilterPanel form
 export const INITIAL_FILTER_DATA = {
 	diets: [],
 	macros: {
@@ -42,6 +44,7 @@ export const WEEKDAYS = [
 	"Saturday",
 ];
 
+// the colors associated with each day of the week for a given macronutrient
 export const WEEKLY_COLORS = {
 	carbs: [
 		"#f44336",

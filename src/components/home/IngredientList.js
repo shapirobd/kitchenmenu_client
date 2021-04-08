@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Typography, Button, Chip, Divider } from "@material-ui/core";
 import { useStyles } from "./styles/IngredientListStyles";
 
+// includes the ingredients that the user has entered into & added through IngredientInput
 const IngredientList = ({
 	ingredients,
 	handleSubmit,

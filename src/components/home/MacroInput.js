@@ -8,6 +8,8 @@ import {
 } from "@material-ui/core";
 import Select from "@material-ui/core/Select";
 
+// a input group that allows you to select an operator (less than or greater than)
+// and an amount (in grams) for a given macronutrient in the FilterPanel component
 const MacroInput = ({ mobile, macro, handleChange }) => {
 	const classes = useStyles();
 

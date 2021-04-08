@@ -16,7 +16,6 @@ export const useStyles = makeStyles(() => ({
 		justifyContent: "space-between",
 		alignItems: "center",
 		overflowY: "auto",
-		// overflow: "hidden",
 	},
 	circularProgress: {
 		color: "#a5d6a7",
@@ -29,24 +28,6 @@ export const useStyles = makeStyles(() => ({
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
-		justifyContent: "center",
-	},
-	results: {
-		width: "100%",
-		backgroundColor: "#fff",
-		display: "flex",
-		flexDirection: "column",
-		justifyContent: "space-around",
-		alignItems: "center",
-		borderRadius: "5px",
-		margin: "0 0 10px 0",
-		paddingBottom: "30px",
-	},
-	missingIngredientsBanner: {
-		width: "100%",
-		height: "80px",
-		display: "flex",
-		flexDirection: "column",
 		justifyContent: "center",
 	},
 }));

@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import WelcomePage from "../WelcomePage";
+import KitchenPage from "../KitchenPage";
 import { MemoryRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 import { Provider } from "react-redux";
@@ -11,7 +11,7 @@ it("should render without crashing", () => {
 		<Provider store={store}>
 			<MemoryRouter>
 				<PersistGate loading={null} persistor={persistor}>
-					<WelcomePage />
+					<KitchenPage />
 				</PersistGate>
 			</MemoryRouter>
 		</Provider>
@@ -23,7 +23,7 @@ it("should match screenshot", () => {
 		<Provider store={store}>
 			<MemoryRouter>
 				<PersistGate loading={null} persistor={persistor}>
-					<WelcomePage />
+					<KitchenPage />
 				</PersistGate>
 			</MemoryRouter>
 		</Provider>

@@ -16,6 +16,8 @@ const DietInputs = ({
 }) => {
 	const classes = useStyles();
 
+	// when a diet becomes checked, add it to the checked state
+	// when a diet becomes unchecked, remove it from the checked state
 	const handleToggle = (value) => () => {
 		const currentIndex = checked.indexOf(value);
 		const newChecked = [...checked];
@@ -27,6 +29,8 @@ const DietInputs = ({
 		setChecked(newChecked);
 	};
 
+	// when the checked state is updated, updated filterData
+	// to include only the checked diets
 	useEffect(() => {
 		setFilterData((filterData) => ({
 			...filterData,

@@ -20,15 +20,18 @@ const HomePage = () => {
 	const [filtered, setFiltered] = useState(false);
 	const [filterData, setFilterData] = useState(INITIAL_FILTER_DATA);
 
-	useEffect(() => {
-		filtered ? dispatch(loadFeed(page, filterData)) : dispatch(loadFeed(page));
-	}, [page, dispatch, filtered]);
-
+	// when the user changes the page, we update the feed in redux state to includes
+	// recipes from the selected page
 	const handleChange = (event, value) => {
 		filtered
 			? dispatch(loadFeed(value, filterData))
 			: dispatch(loadFeed(value));
 	};
+
+	// updates the feed upon initial render as well as page change
+	useEffect(() => {
+		filtered ? dispatch(loadFeed(page, filterData)) : dispatch(loadFeed(page));
+	}, [page, dispatch, filtered]);
 
 	return (
 		<>

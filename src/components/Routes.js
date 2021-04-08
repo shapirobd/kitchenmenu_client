@@ -1,9 +1,8 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import HomePage from "./home/HomePage";
-import WelcomePage from "./home/WelcomePage";
+import KitchenPage from "./home/KitchenPage";
 import SignUpPage from "./user/SignUpPage";
-// import SignUpPageTwo from "./user/SignUpPageTwo";
 import LoginPage from "./user/LoginPage";
 import Profile from "./user/Profile";
 import Recipe from "./recipes/Recipe";
@@ -21,13 +20,10 @@ const useStyles = makeStyles(() => ({
 		padding: "65px 0 0 0 ",
 		overflowY: "auto",
 		display: "flex",
-		// flexWrap: "wrap",
 		justifyContent: "center",
-		// overflow: "hidden",
 		backgroundColor: "#444d4c",
 	},
 	mainContent: {
-		// float: "right",
 		justifyContent: "center",
 	},
 }));
@@ -40,12 +36,12 @@ const Routes = () => {
 	const { width } = useWindowDimensions();
 
 	return (
-		<Container maxWidth="xl" className={classes.root}>
+		<Container maxWidth="xl" className={classes.root} id="switchContainer">
 			{width > 599 ? <SideNav /> : null}
 
 			<Switch className={classes.mainContent}>
 				<Route exact path="/">
-					{user ? <HomePage /> : <WelcomePage />}
+					{user ? <HomePage /> : <KitchenPage />}
 				</Route>
 				<Route exact path="/signup">
 					<SignUpPage />
@@ -54,17 +50,17 @@ const Routes = () => {
 					<TrackerPage />
 				</Route>
 				<Route exact path="/ingredients">
-					<WelcomePage />
+					<KitchenPage />
 				</Route>
 				<Route exact path="/login">
 					<LoginPage />
 				</Route>
 				<Route exact path="/logout" />
 				<Route path="/user/:username">
-					{user ? <Profile /> : <WelcomePage />}
+					{user ? <Profile /> : <KitchenPage />}
 				</Route>
 				<Route path="/bookmarks/:username">
-					{user ? <BookmarksPage /> : <WelcomePage />}
+					{user ? <BookmarksPage /> : <KitchenPage />}
 				</Route>
 				<Route path="/recipes/:recipeId">
 					<Recipe user={user ? user : { bookmarks: [], eatenMeals: {} }} />
