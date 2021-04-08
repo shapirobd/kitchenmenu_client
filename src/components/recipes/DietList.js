@@ -9,6 +9,7 @@ import {
 	Avatar,
 } from "@material-ui/core";
 
+// List of all diets that a given recipe satisfies
 const DietList = ({ diets }) => {
 	const classes = useStyles();
 

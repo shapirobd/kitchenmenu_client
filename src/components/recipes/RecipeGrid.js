@@ -6,10 +6,15 @@ import ClearIcon from "@material-ui/icons/Clear";
 import { useStyles } from "./styles/RecipeGridStyles";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
 
+// Grid containing recipes from feed redux state
+// Each recipe in the grid contains at least its name and image, and
+// can be clicked to get more details on the recipe
 const RecipeGrid = ({ feed, areBookmarks, removeBookmark, ingredients }) => {
 	const classes = useStyles();
 	const { width } = useWindowDimensions();
 
+	// if the recipes shown are based on ingredient search, sort them in order of
+	// how many ingredients are missing (ascending)
 	if (ingredients) {
 		feed.sort((a, b) =>
 			a.missedIngredientCount > b.missedIngredientCount ? 1 : -1

@@ -7,6 +7,7 @@ import { useStyles } from "./styles/BookmarksPageStyles";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
 import { unbookmarkRecipe } from "../../actionCreators/bookmarkActionCreators";
 
+// contains all recipes that the user has bookmarked
 const BookmarksPage = () => {
 	const classes = useStyles();
 	const dispatch = useDispatch();
@@ -15,11 +16,14 @@ const BookmarksPage = () => {
 	const [fullBookmarks, setFullBookmarks] = useState([]);
 	const { width } = useWindowDimensions();
 
+	// updates fullBookmarks state to exclude the bookmark with the given id, then removes that recipeId
+	// from the user's bookmarks in the database as well as redux state
 	const removeBookmark = (id) => {
 		setFullBookmarks(fullBookmarks.filter((bookmark) => bookmark.id !== id));
 		dispatch(unbookmarkRecipe(user.username, id));
 	};
 
+	// whenever bookmarks redux state is updated, update fullBookmarks to include
 	useEffect(() => {
 		const loadBookmarks = async () => {
 			const resp = await axios.get(
@@ -34,7 +38,7 @@ const BookmarksPage = () => {
 			setFullBookmarks(resp.data);
 		};
 		if (bookmarks.length) loadBookmarks();
-	}, [bookmarks]);
+	}, []);
 
 	return (
 		<div className={width > 599 ? classes.root : classes.mobileRoot}>

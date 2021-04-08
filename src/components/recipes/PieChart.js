@@ -3,6 +3,8 @@ import { useStyles } from "./styles/PieChartStyles";
 import { Doughnut } from "react-chartjs-2";
 import { Typography } from "@material-ui/core";
 
+// Pie chart that illustrates the percentage of calories for a given recipe
+// that come from fat, protein and carbs
 const PieChart = ({ caloricBreakdown }) => {
 	const { percentFat, percentCarbs, percentProtein } = caloricBreakdown;
 	const classes = useStyles();

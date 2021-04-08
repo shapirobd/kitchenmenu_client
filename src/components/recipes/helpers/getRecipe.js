@@ -1,5 +1,12 @@
 import axios from "axios";
 
+/**
+ * Retrieves information from Spoonacular API on a given recipe and updates
+ * currentRecipe state in Recipe component to include information on
+ * the recipe & its instructions
+ * @param {Number} recipeId
+ * @param {Function} setCurrentRecipe
+ */
 export const getRecipe = async (recipeId, setCurrentRecipe) => {
 	try {
 		const recipe = await axios.get(

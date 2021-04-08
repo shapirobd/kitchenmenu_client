@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
 
+// Component that lists the ingredients required to make a given recipe
 const RecipeIngredients = ({ ingredients }) => {
 	const classes = useStyles();
 	const { width } = useWindowDimensions();

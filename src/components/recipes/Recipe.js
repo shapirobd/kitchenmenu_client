@@ -21,6 +21,13 @@ import convertDate from "../../helpers/convertDate";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
 import { getRecipe } from "./helpers/getRecipe";
 
+// Component containing all infomration on a given recipe, including:
+// - Diets that the recipe satisfies
+// - An image of the recipe
+// - Percent calories coming from fat, carbs and protein
+// - Macronutrient breakdown in form of a table
+// - Ingredients required to make the recipe
+// - Step-by-step instructions to make the recipe
 const Recipe = ({ user }) => {
 	const classes = useStyles();
 	const { width } = useWindowDimensions();
@@ -39,6 +46,8 @@ const Recipe = ({ user }) => {
 	);
 	const [currentRecipe, setCurrentRecipe] = useState(null);
 
+	// Adds or removes the recipe from ther user's eaten meals within the database
+	// as well as redux state (depending on value of isEaten state)
 	const toggleEaten = () => {
 		if (!user.username) {
 			history.push("/signup");
@@ -62,6 +71,8 @@ const Recipe = ({ user }) => {
 		}
 	};
 
+	// Adds or removes the recipe from ther user's bookmarks within the database
+	// as well as redux state (depending on value of isBookmarked state)
 	const toggleBookmarked = () => {
 		if (!user.username) {
 			history.push("/signup");
@@ -75,6 +86,8 @@ const Recipe = ({ user }) => {
 		}
 	};
 
+	// once recipeId is given a value, retrieve all information on the recipe from
+	// the Spoonacular API
 	useEffect(() => {
 		getRecipe(recipeId, setCurrentRecipe);
 	}, [recipeId]);
