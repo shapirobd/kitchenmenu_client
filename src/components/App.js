@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import NavBar from "./navigation/NavBar";
 import Routes from "./Routes";
 import "./App.css";
@@ -11,14 +11,6 @@ const theme = createMuiTheme({
 });
 
 function App() {
-	// const connectToServer = () => {
-	// 	fetch("/");
-	// };
-
-	// useEffect(() => {
-	// 	connectToServer();
-	// }, []);
-
 	return (
 		<ThemeProvider theme={theme}>
 			<div className="App">
