@@ -7,11 +7,8 @@ import SideNavDrawer from "./SideNavDrawer";
 import { toggleDrawer } from "./helpers/toggleDrawer";
 
 // Contains button that can be clicked to display the SideNavDrawer
-const SideNav = () => {
+const SideNav = ({ state, setState }) => {
 	const classes = useStyles();
-	const [state, setState] = React.useState({
-		left: false,
-	});
 
 	const user = useSelector((state) => state.user);
 

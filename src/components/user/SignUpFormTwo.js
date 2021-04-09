@@ -4,13 +4,14 @@ import { useStyles } from "./styles/SignUpFormStyles";
 
 // Component containing form for user to enter current weight, weight goal and
 // calorie goal for signing up
-const SignUpFormTwo = ({ handleSubmit, handleChange }) => {
+const SignUpFormTwo = ({ handleSubmit, handleChange, formData }) => {
 	const classes = useStyles();
 	return (
 		<form className={classes.form} onSubmit={handleSubmit}>
 			<Grid container spacing={2}>
 				<Grid item xs={12}>
 					<TextField
+						value={formData.weight}
 						className={classes.textField}
 						id="weight"
 						inputProps={{ role: "text" }}
@@ -23,6 +24,7 @@ const SignUpFormTwo = ({ handleSubmit, handleChange }) => {
 				</Grid>
 				<Grid item xs={12}>
 					<TextField
+						value={formData.weight_goal}
 						className={classes.textField}
 						id="weight_goal"
 						inputProps={{ role: "text" }}
@@ -35,6 +37,7 @@ const SignUpFormTwo = ({ handleSubmit, handleChange }) => {
 				</Grid>
 				<Grid item xs={12}>
 					<TextField
+						value={formData.calorie_goal}
 						className={classes.textField}
 						id="calorie_goal"
 						inputProps={{ role: "text" }}

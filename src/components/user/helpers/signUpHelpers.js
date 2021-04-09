@@ -21,7 +21,8 @@ export const getStepContent = (
 	handleChange,
 	handleSubmit,
 	formData,
-	missingData
+	missingData,
+	takenFields
 ) => {
 	switch (step) {
 		case 0:
@@ -31,6 +32,8 @@ export const getStepContent = (
 						handleChange={handleChange}
 						handleSubmit={handleSubmit}
 						missingData={missingData}
+						formData={formData}
+						takenFields={takenFields}
 					/>
 				</>
 			);
@@ -40,6 +43,7 @@ export const getStepContent = (
 					<SignUpFormTwo
 						handleChange={handleChange}
 						handleSubmit={handleSubmit}
+						formData={formData}
 					/>
 				</>
 			);

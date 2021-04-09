@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useStyles } from "./styles/SignUpPageStyles";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
@@ -11,6 +11,7 @@ import { isDataMissing } from "./helpers/isDataMissing";
 import { INITIAL_SIGN_UP_FORM_DATA } from "./helpers/initialSignUpFormData";
 import SignUpStepper from "./SignUpStepper";
 import SignUpButtons from "./SignUpButtons";
+import { checkUsernameAndEmail } from "./helpers/checkUsernameAndEmail";
 
 // Component that navigates the user through the sign up process
 const SignUpPage = () => {
@@ -30,6 +31,12 @@ const SignUpPage = () => {
 		email: false,
 		password: false,
 	});
+	const [takenFields, setTakenFields] = useState({
+		username: false,
+		email: false,
+	});
+	const [checkMade, setCheckMade] = useState(false);
+	const [dataIsMissing, setDataIsMissing] = useState(false);
 
 	// updates the the appropriate key, value pair within formData state
 	// when the user modifies text within the form
@@ -62,19 +69,14 @@ const SignUpPage = () => {
 		return skipped.has(step);
 	};
 
-	// if no required data is missing from the sign up form at the current step,
-	// increment the value of activeStep state to go to the next step of the sign up process
-	const handleNext = () => {
-		let dataMissing = isDataMissing(missingData, formData, setMissingData);
-		if (dataMissing) return;
-
-		let newSkipped = skipped;
-		if (isStepSkipped(activeStep)) {
-			newSkipped = new Set(newSkipped.values());
-			newSkipped.delete(activeStep);
-		}
-		setActiveStep((prevActiveStep) => prevActiveStep + 1);
-		setSkipped(newSkipped);
+	// if no required data is missing from the sign up form at the current step
+	// and the username and email are not taken, increment the value of activeStep state
+	// to go to the next step of the sign up process
+	const handleNext = async () => {
+		setDataIsMissing(isDataMissing(missingData, formData, setMissingData));
+		await checkUsernameAndEmail(formData, setTakenFields);
+		console.log(takenFields);
+		setCheckMade(true);
 	};
 
 	// decrement the value of activeStep state to go to the previous step of the sign up process
@@ -102,6 +104,27 @@ const SignUpPage = () => {
 		setActiveStep(0);
 	};
 
+	// once we have checked for missing data and already taken username/email,
+	// return without proceeding to the next step if any of these checks failed,
+	// otherwise proceed to the next step
+	useEffect(() => {
+		if (checkMade) {
+			if (dataIsMissing || takenFields.email || takenFields.username) {
+				setCheckMade(false);
+				return;
+			} else {
+				let newSkipped = skipped;
+				if (isStepSkipped(activeStep)) {
+					newSkipped = new Set(newSkipped.values());
+					newSkipped.delete(activeStep);
+				}
+				setActiveStep((prevActiveStep) => prevActiveStep + 1);
+				setSkipped(newSkipped);
+				setCheckMade(false);
+			}
+		}
+	}, [checkMade]);
+
 	return (
 		<div className={width > 599 ? classes.main : classes.mobileMain}>
 			<SignUpStepper
@@ -128,7 +151,9 @@ const SignUpPage = () => {
 								handleChange,
 								handleSubmit,
 								formData,
-								missingData
+								missingData,
+								takenFields,
+								setTakenFields
 							)}
 						</Typography>
 						<SignUpButtons

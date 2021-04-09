@@ -4,7 +4,13 @@ import { useStyles } from "./styles/SignUpFormStyles";
 
 // Component containing form for user to enter desired first name, last name,
 // username, email and password for the signing up
-const SignUpFormOne = ({ handleSubmit, handleChange, missingData }) => {
+const SignUpFormOne = ({
+	handleSubmit,
+	handleChange,
+	missingData,
+	formData,
+	takenFields,
+}) => {
 	const classes = useStyles();
 
 	return (
@@ -12,6 +18,7 @@ const SignUpFormOne = ({ handleSubmit, handleChange, missingData }) => {
 			<Grid container spacing={2}>
 				<Grid item xs={12} md={6}>
 					<TextField
+						value={formData.first_name}
 						className={classes.textField}
 						required
 						id="first_name"
@@ -30,6 +37,7 @@ const SignUpFormOne = ({ handleSubmit, handleChange, missingData }) => {
 				</Grid>
 				<Grid item xs={12} md={6}>
 					<TextField
+						value={formData.last_name}
 						className={classes.textField}
 						required
 						id="last_name"
@@ -48,6 +56,7 @@ const SignUpFormOne = ({ handleSubmit, handleChange, missingData }) => {
 				</Grid>
 				<Grid item xs={12}>
 					<TextField
+						value={formData.username}
 						className={classes.textField}
 						required
 						id="username"
@@ -59,13 +68,23 @@ const SignUpFormOne = ({ handleSubmit, handleChange, missingData }) => {
 						onChange={handleChange}
 					/>
 					{missingData.username ? (
-						<Typography variant="caption" color="error">
+						<Typography
+							variant="caption"
+							color="error"
+							style={{ marginRight: "10px" }}
+						>
 							Username required
+						</Typography>
+					) : null}
+					{takenFields.username ? (
+						<Typography variant="caption" color="error">
+							This username is taken
 						</Typography>
 					) : null}
 				</Grid>
 				<Grid item xs={12}>
 					<TextField
+						value={formData.email}
 						className={classes.textField}
 						required
 						id="email"
@@ -82,9 +101,15 @@ const SignUpFormOne = ({ handleSubmit, handleChange, missingData }) => {
 							Email required
 						</Typography>
 					) : null}
+					{takenFields.email ? (
+						<Typography variant="caption" color="error">
+							This email is taken
+						</Typography>
+					) : null}
 				</Grid>
 				<Grid item xs={12}>
 					<TextField
+						value={formData.password}
 						className={classes.textField}
 						required
 						id="password"

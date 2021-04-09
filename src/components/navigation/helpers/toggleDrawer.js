@@ -6,13 +6,21 @@
  * @param {Function} setState
  * @returns
  */
-export const toggleDrawer = (anchor, open, setState) => (event) => {
+export const toggleDrawer = (
+	anchor,
+	open,
+	setState,
+	triggeredByRedirect = false
+) => (event) => {
+	console.log("1. toggleDrawer");
 	if (
+		!triggeredByRedirect &&
 		event &&
 		event.type === "keydown" &&
 		(event.key === "Tab" || event.key === "Shift")
 	) {
 		return;
 	}
+	console.log("TOGGLE");
 	setState((state) => ({ ...state, [anchor]: open }));
 };

@@ -14,7 +14,7 @@ const BookmarksPage = () => {
 	const user = useSelector((state) => state.user);
 	const bookmarks = useSelector((state) => state.user.bookmarks);
 	const [fullBookmarks, setFullBookmarks] = useState([]);
-	const { width } = useWindowDimensions();
+	const { width, height } = useWindowDimensions();
 
 	// updates fullBookmarks state to exclude the bookmark with the given id, then removes that recipeId
 	// from the user's bookmarks in the database as well as redux state
@@ -45,21 +45,21 @@ const BookmarksPage = () => {
 			<div
 				style={
 					width > 599
-						? { width: `${width - 240}px`, height: `100%` }
+						? { width: `${width - 240}px`, height: `${height}px` }
 						: { width: "100%", height: "100%" }
 				}
-				className={classes.main}
 			>
-				<Typography variant="h4" className={classes.header}>
-					Bookmarks
-				</Typography>
-				<Divider variant="inset" className={classes.divider} />
-				<div className={classes.gridContainer}>
-					<RecipeGrid
-						feed={fullBookmarks}
-						areBookmarks={true}
-						removeBookmark={removeBookmark}
-					/>
+				<div className={classes.main}>
+					<Typography variant="h4" className={classes.header}>
+						Bookmarks
+					</Typography>
+					<div className={classes.gridContainer}>
+						<RecipeGrid
+							feed={fullBookmarks}
+							areBookmarks={true}
+							removeBookmark={removeBookmark}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

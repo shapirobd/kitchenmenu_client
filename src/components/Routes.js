@@ -1,5 +1,5 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
+import React, { useState } from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
 import HomePage from "./home/HomePage";
 import KitchenPage from "./home/KitchenPage";
 import SignUpPage from "./user/SignUpPage";
@@ -31,13 +31,21 @@ const useStyles = makeStyles(() => ({
 // Defines the routes that allow the user to navigate through the application
 const Routes = () => {
 	const classes = useStyles();
+	const { width } = useWindowDimensions();
+	const location = useLocation();
 	const user = useSelector((state) => state.user);
 
-	const { width } = useWindowDimensions();
+	const [state, setState] = React.useState({
+		left: false,
+	});
+
+	React.useEffect(() => {
+		setState({ left: false });
+	}, [location]);
 
 	return (
 		<Container maxWidth="xl" className={classes.root} id="switchContainer">
-			{width > 599 ? <SideNav /> : null}
+			{width > 599 ? <SideNav state={state} setState={setState} /> : null}
 
 			<Switch className={classes.mainContent}>
 				<Route exact path="/">
