@@ -70,6 +70,7 @@ const KitchenPage = () => {
 			className={width > 599 ? classes.root : classes.mobileRoot}
 			id="kitchenContainer"
 		>
+			{console.log(results)}
 			<IngredientInput
 				ingredients={ingredients}
 				handleChange={handleChange}

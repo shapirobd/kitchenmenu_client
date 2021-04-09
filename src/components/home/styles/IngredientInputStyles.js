@@ -31,7 +31,7 @@ export const useStyles = makeStyles(() => ({
 	},
 	heading: {
 		display: "block",
-		margin: "20px 0",
+		margin: "20px 0 0 0",
 	},
 	textField: {
 		borderTopRightRadius: "0px",

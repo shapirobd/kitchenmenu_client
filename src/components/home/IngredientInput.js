@@ -34,6 +34,9 @@ const IngredientInput = ({
 					>
 						What's in your kitchen?
 					</Typography>
+					<Typography variant="caption" style={{ marginBottom: "20px" }}>
+						(Typical pantry items, such as water, salt, flour, etc. are ignored)
+					</Typography>
 					<FormGroup row>
 						<TextField
 							variant="outlined"

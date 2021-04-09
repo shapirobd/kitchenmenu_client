@@ -16,7 +16,7 @@ export const useStyles = makeStyles(() => ({
 	},
 	backButton: {
 		float: "right",
-		margin: "15px 0 0 0",
+		margin: "15px 15px 0 0",
 		color: "#fff",
 		backgroundColor: "#f50257",
 		"&:hover": {
