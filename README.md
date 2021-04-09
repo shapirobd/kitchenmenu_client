@@ -1,4 +1,4 @@
-![alt text](/front-end/src/images/logo.png "Text")
+![alt text](src/images/logo.png "Text")
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#description)
 
