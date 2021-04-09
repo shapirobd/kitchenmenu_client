@@ -1,3 +1,6 @@
+/**
+ * Initial value for formData state from SignUpPage
+ */
 export const INITIAL_SIGN_UP_FORM_DATA = {
 	first_name: "",
 	last_name: "",

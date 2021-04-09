@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { useStyles } from "./styles/SideNavStyles";
 import {
 	SwipeableDrawer,
@@ -20,6 +21,12 @@ import { toggleDrawer } from "./helpers/toggleDrawer";
 // within the app
 const SideNavDrawer = ({ setState, state, user }) => {
 	const classes = useStyles();
+	const history = useHistory();
+
+	const handleClick = (evt, href) => {
+		evt.preventDefault();
+		history.push(href);
+	};
 
 	return (
 		<SwipeableDrawer
@@ -34,7 +41,12 @@ const SideNavDrawer = ({ setState, state, user }) => {
 		>
 			<div className={classes.drawerContainer}>
 				<List>
-					<ListItem button component="a" href={`/ingredients`}>
+					<ListItem
+						button
+						component="a"
+						href={`/ingredients`}
+						onClick={(evt) => handleClick(evt, `/ingredients`)}
+					>
 						<ListItemIcon>
 							<KitchenIcon />
 						</ListItemIcon>
@@ -43,19 +55,34 @@ const SideNavDrawer = ({ setState, state, user }) => {
 				</List>
 				<Divider />
 				<List>
-					<ListItem button component="a" href={`/`}>
+					<ListItem
+						button
+						component="a"
+						href={`/`}
+						onClick={(evt) => handleClick(evt, `/`)}
+					>
 						<ListItemIcon>
 							<GridOnIcon />
 						</ListItemIcon>
 						<ListItemText primary="All Recipes" />
 					</ListItem>
-					<ListItem button component="a" href={`/bookmarks/${user.username}`}>
+					<ListItem
+						button
+						component="a"
+						href={`/bookmarks/${user.username}`}
+						onClick={(evt) => handleClick(evt, `/bookmarks/${user.username}`)}
+					>
 						<ListItemIcon>
 							<BookmarkIcon />
 						</ListItemIcon>
 						<ListItemText primary="Bookmarks" />
 					</ListItem>
-					<ListItem button component="a" href={`/tracker`}>
+					<ListItem
+						button
+						component="a"
+						href={`/tracker`}
+						onClick={(evt) => handleClick(evt, `/tracker`)}
+					>
 						<ListItemIcon>
 							<EventNoteIcon />
 						</ListItemIcon>
@@ -64,13 +91,23 @@ const SideNavDrawer = ({ setState, state, user }) => {
 				</List>
 				<Divider />
 				<List>
-					<ListItem button component="a" href={`/user/${user.username}`}>
+					<ListItem
+						button
+						component="a"
+						href={`/user/${user.username}`}
+						onClick={(evt) => handleClick(evt, `/user/${user.username}`)}
+					>
 						<ListItemIcon>
 							<AccountCircleIcon />
 						</ListItemIcon>
 						<ListItemText primary="Profile" />
 					</ListItem>
-					<ListItem button component="a" href={`/logout`}>
+					<ListItem
+						button
+						component="a"
+						href={`/logout`}
+						onClick={(evt) => handleClick(evt, `/logout`)}
+					>
 						<ListItemIcon>
 							<ExitToAppIcon color="error" />
 						</ListItemIcon>

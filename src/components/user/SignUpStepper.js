@@ -5,6 +5,8 @@ import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
 import Typography from "@material-ui/core/Typography";
 
+// Component that displays the steps in the sign up process and highlights
+// which step the user is currently on
 const SignUpStepper = ({
 	activeStep,
 	steps,

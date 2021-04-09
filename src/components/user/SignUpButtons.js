@@ -2,6 +2,8 @@ import React from "react";
 import { useStyles } from "./styles/SignUpPageStyles";
 import Button from "@material-ui/core/Button";
 
+// Displays the "Back", "Skip" (if the active step is optional), and "Next/Finish"
+// buttons that you use to navigate through the sign up process.
 const SignUpButtons = ({
 	steps,
 	isStepOptional,

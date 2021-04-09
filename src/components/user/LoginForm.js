@@ -1,49 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { TextField, Button, Typography } from "@material-ui/core";
 import { useStyles } from "./styles/LoginFormStyles";
-import { useDispatch, useSelector } from "react-redux";
-import { login } from "../../actionCreators/userActionCreators";
-import { useHistory } from "react-router-dom";
 
-const LoginForm = () => {
+// Component that contains form for logging in a user
+const LoginForm = ({ handleSubmit, handleChange, invalidLogin }) => {
 	const classes = useStyles();
-	const dispatch = useDispatch();
-	const history = useHistory();
-	const user = useSelector((state) => state.user);
-
-	const INITIAL_FORM_DATA = {
-		username: "",
-		password: "",
-	};
-	const [formData, setFormData] = useState(INITIAL_FORM_DATA);
-	const [invalidLogin, setInvalidLogin] = useState(undefined);
-
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setFormData((formData) => ({
-			...formData,
-			[name]: value,
-		}));
-	};
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		dispatch(login(formData));
-		setTimeout(() => {
-			if (!user) {
-				setInvalidLogin(true);
-			} else {
-				setInvalidLogin(false);
-			}
-		}, 1000);
-	};
-
-	useEffect(() => {
-		if (user) {
-			setFormData(INITIAL_FORM_DATA);
-			history.push("/");
-		}
-	}, [user, history]);
 
 	return (
 		<form onSubmit={handleSubmit} className={classes.form}>

@@ -3,6 +3,10 @@ import { useStyles } from "./styles/ProfileDataStyles";
 import { Divider, Typography } from "@material-ui/core";
 import EditIcon from "@material-ui/icons/Edit";
 
+// Displays the user's username, first name, last name,
+// email, weight, weight goal and calorie goal.
+// When the EditIcon component is clicked, we use setEditting to update editting to true
+// so that we now see the EditProfileForm component.
 const ProfileData = ({ user, setEditting }) => {
 	const classes = useStyles();
 

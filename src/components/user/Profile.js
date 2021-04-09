@@ -6,6 +6,10 @@ import EditProfileForm from "./EditProfileForm";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
 import ProfileData from "./ProfileData";
 
+// Component that displays the user's username, first name, last name,
+// email, weight, weight goal and calorie goal.
+// The user also may edit their first name, last name,
+// email, weight, weight goal and calorie goal from this page.
 const Profile = () => {
 	const classes = useStyles();
 	const { width } = useWindowDimensions();

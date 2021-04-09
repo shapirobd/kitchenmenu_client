@@ -5,6 +5,10 @@ import { editProfile } from "../../actionCreators/userActionCreators";
 import { useDispatch, useSelector } from "react-redux";
 import { capitalize } from "./helpers/capitalize";
 
+// Contains form for user to edit their first name, last name,
+// email, weight, weight goal and calorie goal.
+// When the "Back" or "Submit" button are clicked, we use setEditting to update editting to false
+// so we now see the ProfileData component.
 const EditProfileForm = ({ user, setEditting }) => {
 	const classes = useStyles();
 	const dispatch = useDispatch();
@@ -19,6 +23,8 @@ const EditProfileForm = ({ user, setEditting }) => {
 		calorie_goal: user.calorie_goal,
 	});
 
+	// updates the the appropriate key, value pair within formData state
+	// when the user modifies text within the form
 	const handleChange = (evt) => {
 		const { name, value } = evt.target;
 		setFormData((formData) => ({
@@ -27,6 +33,8 @@ const EditProfileForm = ({ user, setEditting }) => {
 		}));
 	};
 
+	// updates the user's information in both the database and redux state to include
+	// the new information from formData
 	const handleSubmit = (evt) => {
 		evt.preventDefault();
 		dispatch(editProfile(user.username, { _token: token, data: formData }));

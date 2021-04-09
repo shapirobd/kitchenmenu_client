@@ -2,6 +2,8 @@ import React from "react";
 import { Grid, TextField } from "@material-ui/core";
 import { useStyles } from "./styles/SignUpFormStyles";
 
+// Component containing form for user to enter current weight, weight goal and
+// calorie goal for signing up
 const SignUpFormTwo = ({ handleSubmit, handleChange }) => {
 	const classes = useStyles();
 	return (

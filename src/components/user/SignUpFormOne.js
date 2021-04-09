@@ -2,6 +2,8 @@ import React from "react";
 import { Grid, TextField, Typography } from "@material-ui/core";
 import { useStyles } from "./styles/SignUpFormStyles";
 
+// Component containing form for user to enter desired first name, last name,
+// username, email and password for the signing up
 const SignUpFormOne = ({ handleSubmit, handleChange, missingData }) => {
 	const classes = useStyles();
 

@@ -12,6 +12,7 @@ import { INITIAL_SIGN_UP_FORM_DATA } from "./helpers/initialSignUpFormData";
 import SignUpStepper from "./SignUpStepper";
 import SignUpButtons from "./SignUpButtons";
 
+// Component that navigates the user through the sign up process
 const SignUpPage = () => {
 	const classes = useStyles();
 	const { width } = useWindowDimensions();
@@ -30,6 +31,8 @@ const SignUpPage = () => {
 		password: false,
 	});
 
+	// updates the the appropriate key, value pair within formData state
+	// when the user modifies text within the form
 	const handleChange = (evt) => {
 		const { name, value } = evt.target;
 		setFormData((formData) => ({
@@ -41,20 +44,26 @@ const SignUpPage = () => {
 		}));
 	};
 
+	// creates a new user in the database, logs the user in if
+	// successful, then redirects to the home page
 	const handleSubmit = (evt) => {
 		evt.preventDefault();
 		dispatch(register(formData));
 		history.push("/");
 	};
 
+	// determines if a step in the sign up process can be skipped
 	const isStepOptional = (step) => {
 		return step === 1;
 	};
 
+	// determines if a step in the sign up process was skipped by the user
 	const isStepSkipped = (step) => {
 		return skipped.has(step);
 	};
 
+	// if no required data is missing from the sign up form at the current step,
+	// increment the value of activeStep state to go to the next step of the sign up process
 	const handleNext = () => {
 		let dataMissing = isDataMissing(missingData, formData, setMissingData);
 		if (dataMissing) return;
@@ -68,10 +77,13 @@ const SignUpPage = () => {
 		setSkipped(newSkipped);
 	};
 
+	// decrement the value of activeStep state to go to the previous step of the sign up process
 	const handleBack = () => {
 		setActiveStep((prevActiveStep) => prevActiveStep - 1);
 	};
 
+	// if the current step can be skipped increment the value of activeStep
+	// state to go to the next step of the sign up process
 	const handleSkip = () => {
 		if (!isStepOptional(activeStep)) {
 			throw new Error("You can't skip a step that isn't optional.");
@@ -85,6 +97,7 @@ const SignUpPage = () => {
 		});
 	};
 
+	// reset the value of activeStep state to be zero
 	const handleReset = () => {
 		setActiveStep(0);
 	};
