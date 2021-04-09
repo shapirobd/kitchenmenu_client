@@ -11,13 +11,13 @@ const theme = createMuiTheme({
 });
 
 function App() {
-	const connectToServer = () => {
-		fetch("/");
-	};
+	// const connectToServer = () => {
+	// 	fetch("/");
+	// };
 
-	useEffect(() => {
-		connectToServer();
-	}, []);
+	// useEffect(() => {
+	// 	connectToServer();
+	// }, []);
 
 	return (
 		<ThemeProvider theme={theme}>
