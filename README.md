@@ -21,7 +21,7 @@ npm install
 ## ➤ Running Tests
 
 ```
-npm test
+npm run test
 ```
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#features)
