@@ -12,10 +12,10 @@ import axios from "axios";
 import "@testing-library/jest-dom/extend-expect";
 
 const user = {
-	first_name: "Brian",
-	last_name: "Shapiro",
-	username: "shapirobd",
-	email: "briandavidshapiro@gmail.com",
+	first_name: "Test",
+	last_name: "User",
+	username: "testuser123",
+	email: "testuser123@gmail.com",
 	password: "testPassword!",
 	weight: "165",
 	weight_goal: "160",
@@ -78,8 +78,7 @@ describe("registering a user", () => {
 				</MemoryRouter>
 			</Provider>
 		);
-		const nextBtn = getByText("Next");
-		getByRole("text", { name: "First Name" });
+		const nextBtn = getByRole("button", { name: "Next" });
 		fireEvent.change(getByRole("text", { name: "First Name" }), {
 			target: { value: "Brian" },
 		});
@@ -96,30 +95,33 @@ describe("registering a user", () => {
 			target: { value: "testPassword!" },
 		});
 		fireEvent.click(nextBtn);
-		expect(getByRole("text", { name: "Weight" })).toBeInTheDocument();
-		expect(getByRole("text", { name: "Weight Goal" })).toBeInTheDocument();
-		expect(getByRole("text", { name: "Calorie Goal" })).toBeInTheDocument();
-		fireEvent.change(getByRole("text", { name: "Weight" }), {
-			target: { value: "165" },
-		});
-		fireEvent.change(getByRole("text", { name: "Weight Goal" }), {
-			target: { value: "160" },
-		});
-		fireEvent.change(getByRole("text", { name: "Calorie Goal" }), {
-			target: { value: "2000" },
-		});
-		fireEvent.click(nextBtn);
-		expect(getByText("Brian")).toBeInTheDocument();
-		expect(getByText("Shapiro")).toBeInTheDocument();
-		expect(getByText("shapirobd")).toBeInTheDocument();
-		expect(getByText("briandavidshapiro@gmail.com")).toBeInTheDocument();
-		expect(getByText("165")).toBeInTheDocument();
-		expect(getByText("160")).toBeInTheDocument();
-		expect(getByText("2000")).toBeInTheDocument();
-		const finishBtn = getByRole("button", { name: "Finish" });
-		fireEvent.click(finishBtn);
 		setTimeout(() => {
-			expect(getByText("Logout")).toBeInTheDocument();
+			expect(getByRole("text", { name: "Weight" })).toBeInTheDocument();
+			expect(getByRole("text", { name: "Weight Goal" })).toBeInTheDocument();
+			expect(getByRole("text", { name: "Calorie Goal" })).toBeInTheDocument();
+
+			fireEvent.change(getByRole("text", { name: "Weight" }), {
+				target: { value: "165" },
+			});
+			fireEvent.change(getByRole("text", { name: "Weight Goal" }), {
+				target: { value: "160" },
+			});
+			fireEvent.change(getByRole("text", { name: "Calorie Goal" }), {
+				target: { value: "2000" },
+			});
+			fireEvent.click(nextBtn);
+			expect(getByText("Brian")).toBeInTheDocument();
+			expect(getByText("Shapiro")).toBeInTheDocument();
+			expect(getByText("shapirobd")).toBeInTheDocument();
+			expect(getByText("briandavidshapiro@gmail.com")).toBeInTheDocument();
+			expect(getByText("165")).toBeInTheDocument();
+			expect(getByText("160")).toBeInTheDocument();
+			expect(getByText("2000")).toBeInTheDocument();
+			const finishBtn = getByRole("button", { name: "Finish" });
+			fireEvent.click(finishBtn);
+			setTimeout(() => {
+				expect(getByText("Logout")).toBeInTheDocument();
+			}, 1000);
 		}, 1000);
 	});
 });

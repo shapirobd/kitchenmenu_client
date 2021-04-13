@@ -3,29 +3,29 @@
 exports[`should match screenshot 1`] = `
 <DocumentFragment>
   <div
-    class="makeStyles-root-13"
+    class="makeStyles-root-16"
   >
     <header
-      class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary makeStyles-appBar-14 mui-fixed MuiPaper-elevation4"
+      class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary makeStyles-appBar-17 mui-fixed MuiPaper-elevation4"
     >
       <div
-        class="MuiToolbar-root makeStyles-root-13 MuiToolbar-regular MuiToolbar-gutters"
+        class="MuiToolbar-root makeStyles-root-16 MuiToolbar-regular MuiToolbar-gutters"
       >
         <a
-          class="makeStyles-navLink-18 makeStyles-title-16"
+          class="makeStyles-navLink-21 makeStyles-title-19"
           href="/"
         >
           <img
             alt="logo.png"
-            class="makeStyles-logo-17"
+            class="makeStyles-logo-20"
             src="logo.png"
           />
         </a>
         <form
-          class="makeStyles-search-20"
+          class="makeStyles-search-22"
         >
           <div
-            class="makeStyles-searchIcon-22"
+            class="makeStyles-searchIcon-24"
           >
             <svg
               aria-hidden="true"
@@ -39,22 +39,22 @@ exports[`should match screenshot 1`] = `
             </svg>
           </div>
           <div
-            class="MuiInputBase-root makeStyles-inputRoot-23"
+            class="MuiInputBase-root makeStyles-inputRoot-25"
           >
             <input
               aria-label="search"
-              class="MuiInputBase-input makeStyles-input-24"
-              placeholder="Search…"
+              class="MuiInputBase-input makeStyles-input-26"
+              placeholder="Search by name…"
               type="text"
               value=""
             />
           </div>
         </form>
         <div
-          style="float: right;"
+          class="makeStyles-userOptions-29"
         >
           <a
-            class="makeStyles-navLink-18"
+            class="makeStyles-navLink-27"
             href="/login"
           >
             <button
@@ -73,11 +73,11 @@ exports[`should match screenshot 1`] = `
             </button>
           </a>
           <a
-            class="makeStyles-navLink-18"
+            class="makeStyles-navLink-27"
             href="/signup"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-signupBtn-19 MuiButton-colorInherit"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-signupBtn-28 MuiButton-colorInherit"
               tabindex="0"
               type="button"
             >

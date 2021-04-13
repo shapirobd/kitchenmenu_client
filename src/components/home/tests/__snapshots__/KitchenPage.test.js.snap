@@ -3,24 +3,31 @@
 exports[`should match screenshot 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid-root makeStyles-root-20 MuiGrid-container MuiGrid-spacing-xs-1"
+    class="MuiGrid-root makeStyles-root-25 MuiGrid-container MuiGrid-spacing-xs-1"
     cols="2"
+    id="kitchenContainer"
   >
     <div
-      class="MuiGrid-root makeStyles-leftGridItem-22 MuiGrid-item MuiGrid-grid-sm-8"
+      class="MuiGrid-root makeStyles-leftGridItem-29 MuiGrid-item MuiGrid-grid-sm-8"
       cols="1"
     >
       <form
-        style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"
+        class="makeStyles-form-36"
       >
         <div
-          class="makeStyles-main-24"
+          class="makeStyles-main-31"
         >
           <h4
-            class="MuiTypography-root makeStyles-heading-26 MuiTypography-h4"
+            class="MuiTypography-root makeStyles-heading-33 MuiTypography-h4"
           >
             What's in your kitchen?
           </h4>
+          <span
+            class="MuiTypography-root MuiTypography-caption"
+            style="margin-bottom: 20px;"
+          >
+            (Typical pantry items, such as water, salt, flour, etc. are ignored)
+          </span>
           <div
             class="MuiFormGroup-root MuiFormGroup-row"
           >
@@ -28,7 +35,7 @@ exports[`should match screenshot 1`] = `
               class="MuiFormControl-root MuiTextField-root"
             >
               <div
-                class="MuiInputBase-root MuiOutlinedInput-root makeStyles-textField-27 MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+                class="MuiInputBase-root MuiOutlinedInput-root makeStyles-textField-34 MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
               >
                 <input
                   aria-invalid="false"
@@ -38,11 +45,11 @@ exports[`should match screenshot 1`] = `
                 />
                 <fieldset
                   aria-hidden="true"
-                  class="PrivateNotchedOutline-root-29 MuiOutlinedInput-notchedOutline"
+                  class="PrivateNotchedOutline-root-37 MuiOutlinedInput-notchedOutline"
                   style="padding-left: 8px;"
                 >
                   <legend
-                    class="PrivateNotchedOutline-legend-30"
+                    class="PrivateNotchedOutline-legend-38"
                     style="width: 0.01px;"
                   >
                     <span>
@@ -53,7 +60,7 @@ exports[`should match screenshot 1`] = `
               </div>
             </div>
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-addItemBtn-28"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-addItemBtn-35"
               tabindex="0"
               type="button"
             >
@@ -71,14 +78,14 @@ exports[`should match screenshot 1`] = `
       </form>
     </div>
     <div
-      class="MuiGrid-root makeStyles-rightGridItem-35 MuiGrid-item MuiGrid-grid-sm-4"
+      class="MuiGrid-root makeStyles-rightGridItem-43 MuiGrid-item MuiGrid-grid-sm-4"
       cols="1"
     >
       <div
-        class="makeStyles-ingredients-37"
+        class="makeStyles-ingredients-45"
       >
         <h6
-          class="MuiTypography-root makeStyles-heading-34 MuiTypography-h6"
+          class="MuiTypography-root makeStyles-heading-42 MuiTypography-h6"
         >
           Selected Ingredients
         </h6>
@@ -87,15 +94,14 @@ exports[`should match screenshot 1`] = `
           style="width: 100%;"
         />
         <div
-          style="height: 87%; width: 100%; background-color: rgba(255, 255, 255, 0.5);"
+          class="makeStyles-ingredientListContainer-47"
         >
           <div
-            style="display: flex; justify-content: center; flex-wrap: wrap; margin: 10px;"
+            class="makeStyles-ingredientList-48"
           />
         </div>
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-submitBtn-33"
-          style="position: absolute; bottom: 0px; width: 100%; height: 10%; box-shadow: -2px 0px 8px rgba(0,0,0,0.5);"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-submitBtn-41"
           tabindex="0"
           type="submit"
         >
