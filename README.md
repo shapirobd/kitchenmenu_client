@@ -18,6 +18,12 @@ GitHub: https://github.com/shapirobd/kitchenmenu_api
 npm install
 ```
 
+## ➤ Running Tests
+
+```
+npm test
+```
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#features)
 
 ## ➤ Features
