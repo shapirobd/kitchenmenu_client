@@ -71,17 +71,37 @@ const TrackerPage = () => {
 		<div style={{ width: "100%" }}>
 			<Grid
 				container
-				cols={width <= 599 ? 1 : 2}
-				className={width <= 599 ? classes.mobileRoot : classes.root}
+				cols={width <= 959 ? 1 : 2}
+				spacing={1}
+				className={
+					width <= 599
+						? classes.mobileRoot
+						: width <= 959
+						? classes.mdRoot
+						: classes.root
+				}
 			>
-				<Grid item cols={1} md={4} className={classes.gridItem}>
+				<Grid
+					item
+					cols={1}
+					md={4}
+					className={
+						width <= 959 && width > 599
+							? classes.mobileGridItem
+							: classes.gridItem
+					}
+				>
 					<TrackerCalendar
 						calendarDate={calendarDate}
 						setCalendarDate={setCalendarDate}
 					/>
 
 					{width > 599 ? (
-						<TrackerDoughnut dayState={dayState} pieChartData={pieChartData} />
+						<TrackerDoughnut
+							dayState={dayState}
+							pieChartData={pieChartData}
+							mobile={width < 960}
+						/>
 					) : null}
 				</Grid>
 				{width <= 599 ? (

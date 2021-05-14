@@ -12,7 +12,7 @@ const TrackerCalendar = ({ setCalendarDate, calendarDate }) => {
 
 	return (
 		<div
-			className={width <= 599 ? classes.mobileCalendarDiv : classes.calendarDiv}
+			className={width <= 959 ? classes.mobileCalendarDiv : classes.calendarDiv}
 		>
 			<Calendar
 				onChange={setCalendarDate}

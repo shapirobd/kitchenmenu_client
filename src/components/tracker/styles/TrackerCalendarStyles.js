@@ -5,6 +5,9 @@ export const useStyles = makeStyles(() => ({
 		border: "none",
 		width: "100%",
 		height: "100%",
+		"& > div": {
+			height: "fit-content",
+		},
 	},
 	calendarDiv: {
 		backgroundColor: "#fff",
@@ -19,5 +22,6 @@ export const useStyles = makeStyles(() => ({
 		height: "38%",
 		padding: "30px",
 		borderRadius: "5px",
+		margin: "10px 0 7px 0",
 	},
 }));

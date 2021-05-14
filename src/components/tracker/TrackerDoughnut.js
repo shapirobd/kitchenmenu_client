@@ -6,11 +6,11 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 // Component containing doughnut chart that displays total carb, fat and protein consumption
 // for the selected day from TrackerCalendar
-const TrackerDoughnut = ({ dayState, pieChartData }) => {
+const TrackerDoughnut = ({ dayState, pieChartData, mobile }) => {
 	const classes = useStyles();
 
 	return (
-		<div className={classes.doughnutDiv}>
+		<div className={mobile ? classes.mobileDoughnutDiv : classes.doughnutDiv}>
 			{dayState.loaded ? (
 				<>
 					<Typography variant="h6">Daily Macros</Typography>

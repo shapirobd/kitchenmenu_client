@@ -14,7 +14,7 @@ const TrackerBarChart = ({ weekState, barChartData }) => {
 
 	return (
 		<div
-			className={width <= 599 ? classes.mobileBarChartDiv : classes.barChartDiv}
+			className={width <= 959 ? classes.mobileBarChartDiv : classes.barChartDiv}
 		>
 			{weekState.loaded ? (
 				<>

@@ -16,5 +16,24 @@ export const useStyles = makeStyles(() => ({
 		justifyContent: "center",
 		alignItems: "center",
 		borderRadius: "5px",
+		// "& > canvas": {
+		// 	height: "100% !important",
+		// },
+	},
+	mobileDoughnutDiv: {
+		backgroundColor: "#fff",
+		border: "none",
+		width: "88%",
+		height: "38%",
+		padding: "30px",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center",
+		borderRadius: "5px",
+		marginTop: "10px",
+		// "& > canvas": {
+		// 	width: "65% !important",
+		// },
 	},
 }));
