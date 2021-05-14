@@ -6,12 +6,22 @@ KitchenMenu is an application built with ExpressJS & React, and uses the Spoonac
 
 Link: https://kitchenmenu-client.herokuapp.com/
 
+## ➤ Back-end
+
+GitHub: https://github.com/shapirobd/kitchenmenu_api
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#installation)
 
 ## ➤ Installation (npm)
 
 ```
 npm install
+```
+
+## ➤ Running Tests
+
+```
+npm run test
 ```
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#features)
